@@ -1,5 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./styles.css";
+import "./responsive.css";
+import "./IdealBankSectionStyles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./components/header/Header";
 
