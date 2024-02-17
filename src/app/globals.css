@@ -1321,6 +1321,7 @@ a {
   cursor: pointer;
   background-color: transparent;
   /* position: relative; */
+  width: 19rem!important
 }
 
 .catsContent {

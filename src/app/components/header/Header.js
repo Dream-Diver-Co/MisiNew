@@ -6,10 +6,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 // import Image from 'react-bootstrap/Image'
 import logo from '@../../../public/images/logo.png'
+import { Button, Row } from 'react-bootstrap';
 
 function Header() {
   return (
-    <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="bg-body-tertiary fixed-top ">
+    <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href="/">
         <Image
@@ -23,8 +24,8 @@ function Header() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto text-light align-middle">
-            <Nav.Link href="/">Home</Nav.Link>
+          <Nav className="mx-auto text-light justify-content-center">
+            <Nav.Link href="/">HOME</Nav.Link>
             <Nav.Link href="/about">ABOUT US</Nav.Link>
             <NavDropdown title="SERVICES" id="basic-nav-dropdown">
               <NavDropdown.Item href="/therapy">therapy</NavDropdown.Item>
@@ -50,21 +51,15 @@ function Header() {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/career">CAREER</Nav.Link>
-            <Nav.Link href="/register">
-            Register now
-            </Nav.Link>
             <Nav.Link href="/contact">
-            Contact us
+            CONTACT US
             </Nav.Link>
-            <NavDropdown title="Language" id="basic-nav-dropdown">
-            <NavDropdown.Item href="/EN">
-              EN
-              </NavDropdown.Item>
-            <NavDropdown.Item href="/EN">
-              ln
-              </NavDropdown.Item>
-            </NavDropdown>
           </Nav>
+          <Nav.Link href="/register">
+            <Button type="submit">
+            REGISTER NOW
+            </Button>
+            </Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

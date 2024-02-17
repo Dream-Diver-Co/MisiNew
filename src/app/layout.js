@@ -5,6 +5,7 @@ import "./responsive.css";
 import "./IdealBankSectionStyles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Header />
         {children}
+        <Footer/>
         <script src="https://cdn.jsdelivr.net/npm/react-bootstrap@2.10.1/dist/react-bootstrap.min.js"></script>
       </body>
     </html>

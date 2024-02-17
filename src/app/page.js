@@ -11,7 +11,6 @@ import WhyUs from "./components/whyUs/WhyUs";
 import Review from "./components/review/Review";
 import ServiesText from "./components/servicestext/ServiesText";
 import Prices from "./components/prices/Prices";
-import Footer from "./components/footer/Footer";
 
 export default function Home() {
   return (
@@ -23,7 +22,6 @@ export default function Home() {
       <Review/>
       <ServiesText/>
       <Prices/>
-      <Footer/>
     </main>
   );
 }

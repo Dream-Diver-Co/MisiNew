@@ -2,6 +2,11 @@
 import React from 'react'
 import Link from 'next/link';
 import { useContext } from "react";
+import '@/app/responsive.css'
+import '@/app/styles.css'
+import '@/app/booking.css'
+import '@/app/embala.css'
+import '@/app/page.module.css'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import imageLogoBig from "@../../../public/images/misilogo.png";
 import Map from "@/app/components/contact/Map";
@@ -10,7 +15,7 @@ const Footer = () => {
     <>
       <footer
         id="footer"
-        className="bg-black text-white text-center text-md-start py-5"
+        className="bg-black w-100 text-white text-center text-md-start py-5"
       >
         <div className="container">
           <div className="row align-items-center">
@@ -75,33 +80,25 @@ const Footer = () => {
             <div className="col-md-6 col-lg-3 mb-3">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link href="/">
-                    <Link className="nav-link text-white active" href="#">
+                    <Link className="nav-link text-white active" href="/">
                       Home
                     </Link>
-                  </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/about">
                     <Link className="nav-link text-white" href="/about">
                       AboutUs
                     </Link>
-                  </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/services">
                     <Link className="nav-link text-white" href="/services">
                       Services
                     </Link>
-                  </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link href="/career">
                     <Link className="nav-link text-white" href="/career">
                       Career
                     </Link>
-                  </Link>
                 </li>
               </ul>
             </div>
@@ -141,7 +138,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div id="dream-diver" className="bg-dark text-white py-2">
+      <div id="dream-diver" className="bg-dark w-100 text-white py-2">
         <div className="container">
           <p className="text-end mb-0">
             Developed by{" "}
