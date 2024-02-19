@@ -1,8 +1,13 @@
 import React from 'react'
+import Map from '../components/contact/Map'
+import Forminfo from '../components/contact/Forminfo'
 
 const contact = () => {
   return (
-    <div>contact</div>
+    <div>
+      <Forminfo/>
+      <Map/>
+    </div>
   )
 }
 

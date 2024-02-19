@@ -2,6 +2,13 @@
 import React, { useContext, useEffect,useState } from 'react'
 import Link from 'next/link';
 import Countdown from "react-countdown";
+import '../../page.module.css'
+import '../../booking.css'
+import '../../embala.css'
+import '../../globals.css'
+import '../../IdealBankSectionStyles.css'
+import '../../responsive.css'
+import '../../styles.css'
 const SpecialEventd = () => {
     const [events, setEvents] = useState([
         {
@@ -32,7 +39,7 @@ const SpecialEventd = () => {
         }
     ])
   return (
-    <div className='container-fluid bg-dark text-light w-100%' id='special'>
+    <div className='w-100' id='special'>
         <div className='pt-5 rounded' style={{ backdropFilter: 'brightness(0) grayscale(100%)' }}>
             <div className='text-center text-light my-5'>
             <h1> <span className='text-danger' style={{ fontFamily: 'Grape Nuts' }}>Upcoming</span> Events</h1>
