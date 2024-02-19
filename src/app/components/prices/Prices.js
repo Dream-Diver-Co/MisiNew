@@ -77,7 +77,7 @@ const Prices = () => {
               <h1 className="h1-margin-bottom text-center"></h1>
             </div>
 
-            <div className="prices-row prices-row-1 row grid text-center mb-5" style={{ height: match ? '900px' : '1450px' }}>
+            <div className="prices-row prices-row-1 row text-center mb-5" style={{ height: match ? '900px' : '1450px' }}>
 
               {services.map((service, index) => (
                 <div key={service.name} data-aos={index % 2 == 0 ? "zoom-in-down" : "zoom-in-up"} data-aos-duration="1000" className="col-6 col-md-4 mb-3 cats aos-init aos-animate ">

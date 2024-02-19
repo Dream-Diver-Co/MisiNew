@@ -1,7 +1,6 @@
 'use client'
 import React,{ useContext, useEffect } from 'react'
 import CountUp from 'react-countup';
-
 import imageIcon1 from '@/../../public/images/why/1.png';
 import imageIcon2 from '@/../../public/images/why/2.png';
 import imageIcon3 from '@/../../public/images/why/3.png';
@@ -37,9 +36,7 @@ const WhyUs = () => {
             <h6 className=''>People choose us for our best servives</h6>
             <div className="row m-5">
               <div className="col-md-4 mb-3">
-                <Image
-                 width={248}
-                 height={248}
+                <img
                  loading="lazy" 
                  src={imageIcon1.src} 
                  alt="icon 1" />
@@ -49,9 +46,7 @@ const WhyUs = () => {
               </div>
               <div className="col-md-4 mb-3">
                 <div>
-                <Image 
-                width={248}
-                height={248}
+                <img
                 className='img-fluid'
                 loading="lazy" 
                 src={imageIcon2.src} 
@@ -59,12 +54,10 @@ const WhyUs = () => {
                 <h5 className="">Intensive care</h5>
                 <p className='h-30'>We listen actively to our clients concerns and try to see things from their perspective, which enables them to provide personalized and effective care.</p>
                 </div>
-                <button type="button" className='btn bg-dark text-light'>View more</button>
+                <button type="button" className='btn bg-dark text-light posh-button'>View more</button>
               </div>
               <div className="col-md-4 mb-3">
-                <Image 
-                width={248}
-                height={248}
+                <img
                 className='img-fluid'
                 loading="lazy" 
                 src={imageIcon3.src} 

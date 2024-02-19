@@ -79,11 +79,6 @@
   }
 }
 /* Only For Mobile Size Devices */
-@media (max-width: 1200px) {
-  .cats{
-    width: 25rem!important
-  }
-}
 @media (max-width: 767px) {
   #award img {
     height: 48px;

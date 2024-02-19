@@ -1,9 +1,12 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "./styles.css";
+import "./booking.css";
+import "./embala.css";
 import "./responsive.css";
 import "./IdealBankSectionStyles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './page.module.css';
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 

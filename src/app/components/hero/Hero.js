@@ -42,7 +42,7 @@ const Hero = () => {
             >
              </Image>
              <div>
-             <h2 className='tex-align-center'>Love your Life</h2>
+             <h2 className='tex-align-center testAnimSlideIn '>Love your Life</h2>
              </div>
         </SwiperSlide>
         <SwiperSlide className='slide'>
@@ -54,7 +54,7 @@ const Hero = () => {
                 height: '110vh',
               }}
             ></Image>
-            <h2>Turn the stress into strength</h2>
+            <h2 className='tex-align-center testAnimSlideIn ' >Turn the stress into strength</h2>
         </SwiperSlide>
         <SwiperSlide className='slide'>
             <Image 
@@ -65,7 +65,7 @@ const Hero = () => {
                 height: '110vh',
               }}
             ></Image>
-            <h2>Heal the heart</h2>
+            <h2 className='tex-align-center testAnimSlideIn '>Heal the heart</h2>
         </SwiperSlide>
       </Swiper>
     </>
