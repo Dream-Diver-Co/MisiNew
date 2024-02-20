@@ -1,8 +1,10 @@
 import React from 'react'
 import Link from "next/link";
+import Heder from '../components/about/Heder';
 const page = () => {
   return (
     <div>
+      <Heder title={"E-Health"} image={"ehHeader"}></Heder>
       <div className="container text editable-text left mt-5">
         <h2>E-Health</h2>{" "}
         <p>

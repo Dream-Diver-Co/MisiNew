@@ -5,7 +5,6 @@ import Link from 'next/link';
 const page = () => {
   return (
     <div>
-
             <div className="d-flex align-items-center justify-content-between">
                 <div className="d-flex align-items-center" style={{ fontSize: '3rem' }}>
                     <div className="btn btn-link" style={{ fontSize: '3rem' }}> <BiLeftArrowAlt /></div>

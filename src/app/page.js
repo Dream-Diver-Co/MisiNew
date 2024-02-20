@@ -1,19 +1,29 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import "./globals.css";
 import "./styles.css";
+import "./booking.css";
+import "./embala.css";
 import "./responsive.css";
 import "./IdealBankSectionStyles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Hero from "./components/hero/Hero";
 import Award from "./components/award/Award";
-import SpecialEventd from "./components/specialEvents/SpecialEventd";
+import SpecialEventd from "./components/service/SpecialEventd";
 import WhyUs from "./components/whyUs/WhyUs";
 import Review from "./components/review/Review";
-import ServiesText from "./components/servicestext/ServiesText";
+import ServiesText from "./components/service/ServiesText";
 import Prices from "./components/prices/Prices";
+import Header from "./components/header/Header";
+import Hero from "./components/header/Hero";
+import Head from "next/head";
 
 export default function Home() {
   return (
+    <div>
+      <Head>
+        <title>My page title</title>
+      </Head>
+      <Header/>
     <main className={styles.main}>
       <Hero/>
       <Award/>
@@ -23,5 +33,6 @@ export default function Home() {
       <ServiesText/>
       <Prices/>
     </main>
+    </div>
   );
 }

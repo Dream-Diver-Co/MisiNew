@@ -7,7 +7,9 @@ import { FaPhoneAlt, FaArrowRight, FaUserCircle } from "react-icons/fa";
 import imageLogoBig from "@/../../public/images/misilogo.png";
 import menuIcon from "@/../../public/images/buttons/menu.svg";
 import closeIcon from "@/../../public/images/buttons/close.svg";
-const MainMenu = () => {
+import useMobileDetect from "../mobileDetect/useMobileDetect";
+
+const MainMenu = (device,isSlider) => {
   const [menuPresent, setMenuPresent] = useState(false);
   const mainMenuRef = useRef(null);
   const topRowRef = useRef(null);
@@ -15,12 +17,14 @@ const MainMenu = () => {
   const router = useRouter();
   const path = router.pathname;
 
-  // const flag =
-  //   device === "mobile"
-  //     ? currentDevice.isMobile()
-  //     : device === "desktop"
-  //     ? currentDevice.isDesktop()
-  //     : true;
+  const currentDevice = useMobileDetect();
+
+  const flag =
+    device === "mobile"
+      ? currentDevice.isMobile()
+      : device === "desktop"
+      ? currentDevice.isDesktop()
+      : true;
 
   useEffect(() => {
     // Navbar shrink function
@@ -98,9 +102,9 @@ const MainMenu = () => {
     <nav
       id="main-menu"
       className={
-        // isSlider
-          "navbar navbar-expand-lg navbar-dark m-0 p-0"
-          // : "navbar m-0 p-0 navbar-expand-lg navbar-dark without-slider"
+        isSlider
+          ? "navbar navbar-expand-lg navbar-dark m-0 p-0"
+          : "navbar m-0 p-0 navbar-expand-lg navbar-dark without-slider"
       }
       ref={mainMenuRef}
     >
@@ -185,14 +189,14 @@ const MainMenu = () => {
                   <li className="nav-item">
                     <Link className={
                           "nav-link"
-                        } href="/aboutUs">
+                        } href="/about">
                         AboutUs
                     </Link>
                   </li>
                   <li className="nav-item dropdown">
                     <Link className={
                             "nav-link dropdown-toggle"
-                        } href="/services" data-bs-toggle="dropdown">
+                        } href="/service" data-bs-toggle="dropdown">
                         Services
                     </Link>
                     <ul
@@ -205,7 +209,7 @@ const MainMenu = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item text-capitalize" href="/diagnostic-research">
+                        <Link className="dropdown-item text-capitalize" href="/diagnostic">
                             diagnostic research
                         </Link>
                       </li>
@@ -215,7 +219,7 @@ const MainMenu = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item text-capitalize" href="/non-insured-care">
+                        <Link className="dropdown-item text-capitalize" href="/nonInsuredCare">
                             insured and uninsured care
                         </Link>
                       </li>
@@ -235,7 +239,7 @@ const MainMenu = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item text-capitalize" href="/toolsLink">
+                        <Link className="dropdown-item text-capitalize" href="/toolslink">
                             Tools videos and links
                         </Link>
                       </li>
@@ -290,6 +294,8 @@ const MainMenu = () => {
       </div>
     </nav>
   )
+};
+MainMenu.defaultProps = {
+  device: "mobile" || "desktop",
 }
-
 export default MainMenu
