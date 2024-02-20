@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './page.module.css';
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import ScrollToTop from "./components/scrolling/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
+        
         {children}
         <Footer/>
         <script src="https://cdn.jsdelivr.net/npm/react-bootstrap@2.10.1/dist/react-bootstrap.min.js"></script>

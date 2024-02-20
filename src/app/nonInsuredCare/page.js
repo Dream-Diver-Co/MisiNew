@@ -1,9 +1,11 @@
 'use client'
 import React from 'react'
 import Link from "next/link";
+import Heder from '../components/about/Heder';
 const page = () => {
   return (
     <div>
+      <Heder title={"Insured and Uninsured Care"} image={"nicHeader"}></Heder>
       <div className="container text editable-text left mt-5">
         <>
           <h2>Insured care</h2>

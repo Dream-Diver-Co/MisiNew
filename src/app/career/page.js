@@ -3,6 +3,7 @@ import React,{ useState } from 'react'
 import Head from 'next/head'
 import jobImage1 from "@../../../public/images/jobs/job1.jpg";
 import Link from "next/link";
+import Heder from '../components/about/Heder';
 const page = () => {
     const [jobs, setJobs] = useState([
         {
@@ -44,7 +45,7 @@ const page = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Heder title={"Career"} image={"carHeader"} />
       <div className="container py-5">
         <h1 className="text-center">Vacancies</h1>
         <hr />

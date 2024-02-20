@@ -1,8 +1,10 @@
 import React from 'react'
+import Heder from '../components/about/Heder'
 
 const page = () => {
   return (
     <div>
+      <Heder title={"Waiting times"} image={"ehHeader"}></Heder>
       <div>
         <div className="container text editable-text left mt-5">
           <>
