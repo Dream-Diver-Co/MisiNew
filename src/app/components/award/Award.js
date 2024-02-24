@@ -60,7 +60,12 @@ const Award = () => {
               {brandImages.map((data, index) => (
                 <SwiperSlide key={index}>
                   <div className='text-center'>
-                    <img loading="lazy" src={data.image.src} style={{width:'150px',height:'auto'}} alt="award-coffure" />
+                    <Image width={150}
+                     height={100}
+                     loading="lazy" 
+                     src={data.image.src} 
+                     layout="responsive"
+                     style={{width:'150px',height:'auto'}} alt="award-coffure" />
                   </div>
                 </SwiperSlide>
               ))}

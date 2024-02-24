@@ -1,4 +1,12 @@
+'use client'
 import React from 'react'
+import '@/app/page.module.css'
+import '@/app/booking.css'
+import '@/app/embala.css'
+import '@/app/globals.css'
+import '@/app/IdealBankSectionStyles.css'
+import '@/app/responsive.css'
+import '@/app/styles.css'
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 const page = () => {
   return (
@@ -22,38 +30,38 @@ const page = () => {
                                         <input type="text" name="name" className="form-control" id="inputName" placeholder="Name" value='' />
                                     </div>
                                     <div className="mb-3">
-                                        <label htmlFor="inputEmail" className="form-label">{state.text.bookingEmail}</label>
-                                        <input type="email" name="email" className="form-control" id="inputEmail" placeholder={state.text.bookingEmailPlaceholder} value={formData.email} onChange={(e) => setSetFromData({ ...formData, email: e.target.value })} />
+                                        <label htmlFor="inputEmail" className="form-label">Email</label>
+                                        <input type="email" name="email" className="form-control" id="inputEmail" placeholder="" value=""onChange={(e) => setSetFromData({ ...formData, email: e.target.value })} />
                                     </div>
                                     <div className="mb-3">
-                                        <label htmlFor="inputPassword" className="form-label">{state.text.bookingPassword}</label>
-                                        <input type="password" name="password" className="form-control" id="inputPassword" placeholder={state.text.bookingPasswordPlaceholder} value={formData.password} onChange={(e) => setSetFromData({ ...formData, password: e.target.value })} />
+                                        <label htmlFor="inputPassword" className="form-label">Password</label>
+                                        <input type="password" name="password" className="form-control" id="inputPassword" placeholder="Password" value="" onChange={(e) => setSetFromData({ ...formData, password: e.target.value })} />
                                     </div>
                                     <div className="mb-3">
-                                        <label htmlFor="inputPhone" className="form-label">{state.text.bookingPhone}</label>
-                                        <input type="text" name="phone" className="form-control" id="inputPhone" placeholder={state.text.bookingPhonePlaceholder} value={formData.phone} onChange={(e) => setSetFromData({ ...formData, phone: e.target.value })} />
+                                        <label htmlFor="inputPhone" className="form-label">Phone</label>
+                                        <input type="text" name="phone" className="form-control" id="inputPhone" placeholder="Phone" value="" onChange={(e) => setSetFromData({ ...formData, phone: e.target.value })} />
                                     </div>
 
-                                    <a className="btn-next btn btn-dark" onClick={onSignup}>{state.text.saveChangesText}<BiRightArrowAlt className="ms-1" /></a>
+                                    <a className="btn-next btn btn-dark" >Save<BiRightArrowAlt className="ms-1" /></a>
 
                                 </form>
                             </div>
                             <div className="tab-pane fade" id="nav-booking" role="tabpanel" aria-labelledby="nav-booking-tab">
-                                <h1>{state.text.Bookings}</h1>
+                                <h1>Bookings</h1>
                                 <div className='table-responsive'>
                                     <table className='table table-light'>
                                         <thead>
 
                                             <tr>
-                                                <th> {state.text.bookingDateTime} </th>
-                                                <th> {state.text.bookingServices} </th>
-                                                <th> {state.text.bookingDuration} </th>
-                                                <th> {state.text.stylist} </th>
-                                                <th> {state.text.bookingTotalPrice} </th>
-                                                <th> {state.text.Status} </th>
+                                                <th> DateTime</th>
+                                                <th>Services </th>
+                                                <th> Duration </th>
+                                                <th> stylist </th>
+                                                <th>TotalPrice </th>
+                                                <th>Status </th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        {/* <tbody>
                                             {bookings.map((booking, index) => (
                                                 <tr key={index}>
                                                     <td> {booking.data.booking_time} </td>
@@ -66,7 +74,7 @@ const page = () => {
                                                     <td> {booking.data.payment_status} </td>
                                                 </tr>
                                             ))}
-                                        </tbody>
+                                        </tbody> */}
                                     </table>
                                 </div>
                             </div>

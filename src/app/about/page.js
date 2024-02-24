@@ -1,10 +1,14 @@
 import React from 'react'
 import Link from "next/link";
-import '../page.module.css'
-import '../booking.css'
-import '../responsive.css'
-import '../styles.css'
-import AboutItem from '../components/about/AboutItem';
+import Image from 'next/image';
+import '@/app/page.module.css'
+import '@/app/booking.css'
+import '@/app/embala.css'
+import '@/app/globals.css'
+import '@/app/IdealBankSectionStyles.css'
+import '@/app/responsive.css'
+import '@/app/styles.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Head from 'next/head';
 import Heder from '../components/about/Heder';
 import ScrollToTop from '../components/scrolling/ScrollToTop';
@@ -12,9 +16,9 @@ const about = () => {
   return (
     <div>
       <Head>
-        <title>My page title</title>
+        <title>About</title>
       </Head>
-      <Heder/>
+      <Heder />
       <ScrollToTop/>
       <div className="container pt-4">
         <ul

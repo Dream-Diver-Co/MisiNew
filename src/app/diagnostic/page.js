@@ -1,5 +1,12 @@
 import React from 'react'
 import Link from "next/link";
+import '@/app/page.module.css'
+import '@/app/booking.css'
+import '@/app/embala.css'
+import '@/app/globals.css'
+import '@/app/IdealBankSectionStyles.css'
+import '@/app/responsive.css'
+import '@/app/styles.css'
 import Heder from '../components/about/Heder';
 
 const page = () => {
