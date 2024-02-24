@@ -10,6 +10,7 @@ import '@/app/page.module.css'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import imageLogoBig from "@../../../public/images/misilogo.png";
 import Map from "@/app/components/contact/Map";
+import Image from 'next/image';
 const Footer = () => {
   return (
     <>
@@ -20,12 +21,13 @@ const Footer = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6 col-lg-3 mb-5">
-              <img
+              <Image
                 loading="lazy"
                 src={imageLogoBig.src}
                 alt="logo1"
                 className="mb-3"
-                width="100%"
+                width={100}
+                height={100}
               />
 
               <div className="editable-text left">

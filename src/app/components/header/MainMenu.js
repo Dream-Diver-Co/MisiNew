@@ -1,6 +1,13 @@
 'use client'
 import React,{useRef,useState,useEffect,} from 'react'
 import Image from 'next/image';
+import '@/app/page.module.css'
+import '@/app/booking.css'
+import '@/app/embala.css'
+import '@/app/globals.css'
+import '@/app/IdealBankSectionStyles.css'
+import '@/app/responsive.css'
+import '@/app/styles.css'
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FaPhoneAlt, FaArrowRight, FaUserCircle } from "react-icons/fa";
@@ -121,11 +128,12 @@ const MainMenu = (device,isSlider) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <Link className="navbar-brand me-0" href="/">
-            <img
+            <Image
               loading="lazy"
               src={imageLogoBig.src}
               alt="logo2x"
-              width="150"
+              width={150}
+              height={150}
               className="navbar-brand-img d-inline-block"
               ref={navbarBrandImgRef}
             />
@@ -279,11 +287,11 @@ const MainMenu = (device,isSlider) => {
                   {" "}
                   {menuPresent ? (
                     <button onClick={hideMenu} className="btn">
-                      <img src={closeIcon.src} width={32} />
+                      <Image  sizes="100vw" src={closeIcon.src} width={32} height={32} />
                     </button>
                   ) : (
                     <button onClick={showMenu} className="btn">
-                      <img src={menuIcon.src} width={32} />
+                      <Image src={menuIcon.src} width={32} height={32} />
                     </button>
                   )}
                 </div>

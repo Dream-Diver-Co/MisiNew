@@ -7,9 +7,9 @@ import "./responsive.css";
 import "./IdealBankSectionStyles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './page.module.css';
-import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import ScrollToTop from "./components/scrolling/ScrollToTop";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         
         {children}
         <Footer/>
-        <script src="https://cdn.jsdelivr.net/npm/react-bootstrap@2.10.1/dist/react-bootstrap.min.js"></script>
+        <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" strategy="lazyOnload" />
       </body>
     </html>
   );

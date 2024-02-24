@@ -1,5 +1,12 @@
 import React from 'react'
 import Link from "next/link";
+import '@/app/page.module.css'
+import '@/app/booking.css'
+import '@/app/embala.css'
+import '@/app/globals.css'
+import '@/app/IdealBankSectionStyles.css'
+import '@/app/responsive.css'
+import '@/app/styles.css'
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 const page = () => {
   return (
@@ -33,7 +40,7 @@ const page = () => {
                                     </Link>
                                     {/* {isLogin ?  : state.text.bookingAccountTextRegister} */}
                                     <div>
-                                        <p>Don't have account click here </p>
+                                        <p>Dont have account click here </p>
                                         <Link href="/register">
                                             <button type="button" className="btn btn-link px-1">Register</button>
                                         </Link>

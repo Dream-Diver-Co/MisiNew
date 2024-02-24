@@ -1,10 +1,18 @@
 'use client'
 import React,{ useState } from 'react'
 import Head from 'next/head'
+import '@/app/page.module.css'
+import '@/app/booking.css'
+import '@/app/embala.css'
+import '@/app/globals.css'
+import '@/app/IdealBankSectionStyles.css'
+import '@/app/responsive.css'
+import '@/app/styles.css'
 import jobImage1 from "@../../../public/images/jobs/job1.jpg";
 import Link from "next/link";
 import Heder from '../components/about/Heder';
-const page = () => {
+import Image from 'next/image'
+const Page = () => {
     const [jobs, setJobs] = useState([
         {
           id: 1,
@@ -89,4 +97,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

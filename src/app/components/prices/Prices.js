@@ -84,7 +84,7 @@ const Prices = () => {
                 <div className=" catsContent" style={{ height: '100%',}}>
                   <div className='rounded-5 card frontSide'>
                     <div style={{ height: '250px',}}>
-                      <img src={service.image} style={{ width: 'auto', height: '100%' }} alt="1.png" />
+                      <Image src={service.image} width={100} height={100} style={{ width: 'auto', height: '100%' }} alt="1.png" />
                     </div>
                     <div className="p-2 d-flex align-items-center justify-content-center w-100 text-center">
                       <div>

@@ -1,6 +1,13 @@
 import React from 'react'
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Link from 'next/link';
+import '@/app/page.module.css'
+import '@/app/booking.css'
+import '@/app/embala.css'
+import '@/app/globals.css'
+import '@/app/IdealBankSectionStyles.css'
+import '@/app/responsive.css'
+import '@/app/styles.css'
 const page = () => {
   return (
     <div>
