@@ -143,7 +143,12 @@ const Footer = () => {
       <div id="dream-diver" className="bg-dark w-100 text-white py-2">
         <div className="container">
           <p className="text-end mb-0">
-            Developed by{" "}
+            Developed
+            <Link
+              href="https://www.linkedin.com/in/sakib6619/"
+              className='text-light'
+            > by</Link>
+             {" "}
             <Link
               href="https://dreamdiver.nl/"
               rel="noreferrer"

@@ -37,8 +37,8 @@ const WhyUs = () => {
             <div className="row m-5">
               <div className="col-md-4 mb-3">
                 <Image
-                width="100"
-                height="100"
+                width="120"
+                height="120"
                  loading="lazy"
                  src={imageIcon1.src} 
                  alt="icon 1" />
@@ -49,8 +49,8 @@ const WhyUs = () => {
               <div className="col-md-4 mb-3">
                 <div>
                 <Image
-                width="100"
-                height="100"
+                width="120"
+                height="120"
                 className='img-fluid'
                 loading="lazy" 
                 src={imageIcon2.src} 
@@ -62,8 +62,8 @@ const WhyUs = () => {
               </div>
               <div className="col-md-4 mb-3">
                 <Image
-                width="100"
-                height="100"
+                width="120"
+                height="120"
                 className='img-fluid'
                 loading="lazy" 
                 src={imageIcon3.src} 

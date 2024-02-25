@@ -2,7 +2,13 @@
 import React,{ useCallback, useContext, useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import imageRating from '@/../../public/images/rating.png'
-import '../../embala.css'
+import '@/app/page.module.css'
+import '@/app/booking.css'
+import '@/app/embala.css'
+import '@/app/globals.css'
+import '@/app/IdealBankSectionStyles.css'
+import '@/app/responsive.css'
+import '@/app/styles.css'
 const Review = () => {
   const reviews = [
     "Ik ben erg prettig geholpen.",

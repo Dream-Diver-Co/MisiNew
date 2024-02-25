@@ -26,7 +26,7 @@ const page = () => {
 
                             <div className="mb-3">
                                 <label htmlFor="inputEmail" className="form-label">Email</label>
-                                <input type="email" name="email" className="form-control" id="inputEmail" placeholder="Email" value="" />
+                                <input type="email" name="email" className="form-control" id="inputEmail" placeholder="Email" value=""/>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="inputPassword" className="form-label">Password</label>

@@ -1,7 +1,10 @@
-import React from 'react'
+'use client'
+import React,{ useEffect } from 'react'
+import AOS from 'aos';
 import '@/app/page.module.css'
 import '@/app/booking.css'
 import '@/app/embala.css'
+import 'aos/dist/aos.css';
 import '@/app/globals.css'
 import '@/app/IdealBankSectionStyles.css'
 import '@/app/responsive.css'
@@ -9,6 +12,9 @@ import '@/app/styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainMenu from '../header/MainMenu'
 const Heder = ({title,image}) => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <header id="header" className="vh-80">
       <MainMenu isSlider={ true } />
