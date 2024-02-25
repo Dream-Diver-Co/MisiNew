@@ -87,4 +87,7 @@
     width: 15rem!important;
     height: 26rem!important;
   }
+  .prices-row{
+    height: auto !important;
+  }
 }

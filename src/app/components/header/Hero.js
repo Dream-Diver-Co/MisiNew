@@ -54,25 +54,18 @@ const Hero = () => {
     <Swiper
         grabCursor={true}
         effect={"creative"}
-        creativeEffect={{
-          prev: {
-            shadow: true,
-            origin: 'left center',
-            translate: ['-5%', 0, -200],
-            rotate: [0, 100, 0],
-          },
-          next: {
-            origin: 'right center',
-            translate: ['5%', 0, -200],
-            rotate: [0, -100, 0],
-          },
-        }}
+        spaceBetween={30}
+        centeredSlides={true}
         speed={600}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
         }}
-        modules={[Autoplay,EffectCreative]}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay,Pagination]}
         className="mySwiper3"
         edgeSwipeDetection={false}
         onSlideChange={

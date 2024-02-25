@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import 'aos/dist/aos.css';
 import "./globals.css";
 import "./styles.css";
 import "./booking.css";
