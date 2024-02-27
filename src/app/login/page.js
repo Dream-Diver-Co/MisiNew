@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Link from "next/link";
 import '@/app/page.module.css'
@@ -8,12 +9,14 @@ import '@/app/IdealBankSectionStyles.css'
 import '@/app/responsive.css'
 import '@/app/styles.css'
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
+import { useRouter } from 'next/navigation';
 const page = () => {
+    const router = useRouter()
   return (
     <div>
             <div className="d-flex align-items-center justify-content-between">
                 <div className="d-flex align-items-center" style={{ fontSize: '3rem' }}>
-                    <div className="btn btn-link"style={{ fontSize: '3rem' }}> <BiLeftArrowAlt /></div>
+                    <div className="btn btn-link" onClick={() => router.back()} style={{ fontSize: '3rem' }}> <BiLeftArrowAlt /></div>
                     Login
                 </div>
             </div>
@@ -26,11 +29,11 @@ const page = () => {
 
                             <div className="mb-3">
                                 <label htmlFor="inputEmail" className="form-label">Email</label>
-                                <input type="email" name="email" className="form-control" id="inputEmail" placeholder="Email" value=""/>
+                                <input type="email" name="email" className="form-control" id="inputEmail" placeholder="Email" />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="inputPassword" className="form-label">Password</label>
-                                <input type="password" name="password" className="form-control" id="inputPassword" placeholder="Password" value="" />
+                                <input type="password" name="password" className="form-control" id="inputPassword" placeholder="Password" />
                             </div>
 
                             <div className="d-flex flex-column justify-content-center w-100 py-3">

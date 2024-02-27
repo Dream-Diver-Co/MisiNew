@@ -11,12 +11,13 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import imageLogoBig from "@../../../public/images/misilogo.png";
 import Map from "@/app/components/contact/Map";
 import Image from 'next/image';
+import LanguageDropdown from '../header/LanguageDropdown';
 const Footer = () => {
   return (
     <>
       <footer
         id="footer"
-        className="bg-black w-100 text-white text-center text-md-start py-5"
+        className="bg-white w-100 text-black text-center text-md-start py-5"
       >
         <div className="container">
           <div className="row align-items-center">
@@ -82,27 +83,28 @@ const Footer = () => {
             <div className="col-md-6 col-lg-3 mb-3">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                    <Link className="nav-link text-white active" href="/">
+                    <Link className="nav-link text-black active" href="/">
                       Home
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link text-white" href="/about">
+                    <Link className="nav-link text-black" href="/about">
                       AboutUs
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link text-white" href="/services">
+                    <Link className="nav-link text-black" href="/service">
                       Services
                     </Link>
                 </li>
 
                 <li className="nav-item">
-                    <Link className="nav-link text-white" href="/career">
+                    <Link className="nav-link text-black" href="/career">
                       Career
                     </Link>
                 </li>
               </ul>
+              <LanguageDropdown></LanguageDropdown>
             </div>
             <div className="col-md-6 col-lg-3 mb-3">
               <h2>CONTACT</h2>
