@@ -201,6 +201,12 @@ const MainMenu = (device,isSlider) => {
                         AboutUs
                     </Link>
                   </li>
+                  <li className="nav-item">
+                      <Link className="nav-link" 
+                      href="/waitings">
+                          waiting times
+                      </Link>
+                    </li>
                   <li className="nav-item dropdown">
                     <Link className={
                             "nav-link dropdown-toggle"
@@ -239,11 +245,6 @@ const MainMenu = (device,isSlider) => {
                       <li>
                         <Link className="dropdown-item text-capitalize" href="/referrers">
                             referrers
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="dropdown-item text-capitalize" href="/waitings">
-                            waiting times
                         </Link>
                       </li>
                       <li>
