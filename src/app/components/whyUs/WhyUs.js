@@ -1,5 +1,5 @@
 'use client'
-import React,{ useContext, useEffect } from 'react'
+import React,{ useContext, useEffect ,useRef} from 'react'
 import CountUp from 'react-countup';
 import imageIcon1 from '@/../../public/images/why/1.png';
 import imageIcon2 from '@/../../public/images/why/2.png';
@@ -16,10 +16,10 @@ const WhyUs = () => {
   let event = false;
   const countUpAnimation = () => {
     if (window.scrollY < 1700) {
-      event = true;
+      event = false;
     } else {
       if (!event) {
-        event = true;
+        event = false;
         document.getElementById('clickButton').click();
         document.getElementById('clickButton2').click();
         document.getElementById('clickButton3').click();
@@ -42,7 +42,7 @@ const WhyUs = () => {
                  loading="lazy"
                  src={imageIcon1.src} 
                  alt="icon 1" />
-                <h5 className="">Empathetic Professionals</h5>
+                <h5 className="mt-4 mb-4">Empathetic Professionals</h5>
                 <p className='h-30'>Our professionals possess the ability to understand and share the feelings of others.They are compassionate,kind-hearted,and possess a high level of emotional intelligence.</p>
                 <button type="button" className='btn bg-dark text-light posh-button'>View more</button>
               </div>
@@ -55,7 +55,7 @@ const WhyUs = () => {
                 loading="lazy" 
                 src={imageIcon2.src} 
                 alt="icon 2" />
-                <h5 className="">Intensive care</h5>
+                <h5 className="mt-4 mb-4">Intensive care</h5>
                 <p className='h-30'>We listen actively to our clients concerns and try to see things from their perspective, which enables them to provide personalized and effective care.</p>
                 </div>
                 <button type="button" className='btn bg-dark text-light posh-button'>View more</button>
@@ -68,7 +68,7 @@ const WhyUs = () => {
                 loading="lazy" 
                 src={imageIcon3.src} 
                 alt="icon 3" />
-                <h5 className="">Certified therapist</h5>
+                <h5 className="mt-4 mb-4">Certified therapist</h5>
                 <p className='h-30'>Our therapists are professional and certified. We follow ethical guidelines and maintain strict confidentiality to ensure the safety and privacy of our clients.</p>
                 <button type="button" className='btn bg-dark text-light posh-button'>View more</button>
               </div>
@@ -78,7 +78,7 @@ const WhyUs = () => {
         <hr/>
         <div className='row text-center mt-3'>
           <div className='col-3'>
-            <h1>
+            <h1 className='fw-bolder'>
               <CountUp duration={3} useEasing start={100} end={200} suffix="+">
                 {({ countUpRef, start }) => (
                   <div>
@@ -88,10 +88,10 @@ const WhyUs = () => {
                 )}
               </CountUp>
             </h1>
-            <h6>Visitors daily</h6>
+            <h6 className='fw-bolder'>Visitors daily</h6>
           </div>
           <div className='col-3'>
-            <h1>
+            <h1 className='fw-bolder'>
               <CountUp duration={3} useEasing start={0} end={30} suffix="+">
                 {({ countUpRef, start }) => (
                   <div>
@@ -101,10 +101,10 @@ const WhyUs = () => {
                 )}
               </CountUp>
             </h1>
-            <h6>Therapists</h6>
+            <h6 className='fw-bolder'>Therapists</h6>
           </div>
           <div className='col-3'>
-            <h1>
+            <h1 className='fw-bolder'>
               <CountUp duration={3} useEasing start={0} end={100} suffix="%">
                 {({ countUpRef, start }) => (
                   <div>
@@ -114,10 +114,10 @@ const WhyUs = () => {
                 )}
               </CountUp>
             </h1>
-            <h6>Positive feedback</h6>
+            <h6 className='fw-bolder'>Positive feedback</h6>
           </div>
           <div className='col-3'>
-            <h1>
+            <h1 className='fw-bolder'>
               <CountUp duration={3} useEasing start={0} end={50} suffix="+">
                 {({ countUpRef, start }) => (
                   <div>
@@ -127,7 +127,7 @@ const WhyUs = () => {
                 )}
               </CountUp>
             </h1>
-            <h6>Awards & honors</h6>
+            <h6 className='fw-bolder'>Awards & honors</h6>
           </div>
         </div>
 

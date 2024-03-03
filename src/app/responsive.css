@@ -3,6 +3,9 @@
   #main-menu {
     background-color: #000 !important;
   }
+  #navFade{
+    transform: translateX(0%);
+  }
 }
 /* For Tablet And Mobile Size Devices */
 @media (max-width: 768px) {

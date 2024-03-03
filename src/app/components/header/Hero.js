@@ -55,17 +55,17 @@ const Hero = () => {
         grabCursor={true}
         effect={"creative"}
         spaceBetween={30}
-        centeredSlides={true}
+        centeredSlides={false}
         speed={600}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{
-          clickable: true,
+          clickable: false,
         }}
-        navigation={true}
-        modules={[Autoplay,Pagination]}
+        navigation={false}
+        modules={[Autoplay]}
         className="mySwiper3"
         edgeSwipeDetection={false}
         onSlideChange={
