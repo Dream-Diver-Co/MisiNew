@@ -9,13 +9,16 @@ import '../../globals.css'
 import '../../IdealBankSectionStyles.css'
 import '../../responsive.css'
 import '../../styles.css'
+import Image from 'next/image';
+import event1 from '@/../../public/images/event/event1.png'
+import event2 from '@/../../public/images/event/event2.png'
 const SpecialEventd = () => {
     const [events, setEvents] = useState([
         {
             id: 1,
             title: "Neuro Seminar",
             description: '',
-            image: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+            image: event1,
             startDate: new Date('May 15, 2023').toDateString(),
             endDate: new Date('May 18, 2023').toDateString(),
         },
@@ -23,7 +26,7 @@ const SpecialEventd = () => {
             id: 2,
             title: "Neuro Seminar 2",
             description: '',
-            image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+            image: event2,
             startDate: new Date('May 20, 2023').toDateString(),
             endDate: new Date('May 25, 2022').toDateString(),
 
@@ -32,7 +35,7 @@ const SpecialEventd = () => {
             id: 3,
             title: "Health workshop",
             description: '',
-            image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+            image: event2,
             startDate: new Date('May 20, 2023').toDateString(),
             endDate: new Date('May 25, 2023').toDateString(),
 
@@ -42,7 +45,7 @@ const SpecialEventd = () => {
     <div className='w-100' id='special'>
         <div className='pt-5 rounded' style={{ backdropFilter: 'brightness(0) grayscale(100%)' }}>
             <div className='text-center text-light my-5'>
-            <h1> <span className='text-danger' style={{ fontFamily: 'Grape Nuts' }}>Upcoming</span> Events</h1>
+            <h1> <span className='text-danger nuts-f'>Upcoming</span> Events</h1>
             </div>
             <div id="specialCarousel" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ height: '50vh', overflow: 'hidden' }}>
                 <div className="carousel-indicators">
@@ -57,14 +60,14 @@ const SpecialEventd = () => {
                                     <div data-bs-interval="2000" className="carousel-item active">
                                         <div className='row justify-content-center align-items-center h-100'>
                                             <div className='col-md-6'>
-                                                <div className='row align-items-stretch' style={{ height: '350px', overflow: 'hidden', borderRadius: '10px', position: 'relative' }}>
+                                                <div className='align-items-stretch' style={{ height: '350px', overflow: 'hidden', borderRadius: '10px', position: 'relative' }}>
                                                     <div className='eventDate' style={{zIndex: '9'}}>
                                                         <div className='eventDateText'>
                                                             {event.startDate}
                                                         </div>
                                                     </div>
                                                     <div className='col-12 p-0 h-100' style={{ overflow: 'hidden' }}>
-                                                        <img className="w-100 h-100" style={{ objectFit: 'cover' }} src={`${event.image}`} alt="Image Title" />
+                                                        <Image width={100} height={100} className="w-100 h-100" style={{ objectFit: 'cover' }} src={event.image} alt="Image Title" />
                                                     </div>
                                                     <div className='col-12 m-0 p-0 bg-white row align-items-center justify-content-center' style={{position: 'absolute', top: '63px', opacity: '0.777'}}>
                                                         <div className='text-center col-11'>
@@ -126,18 +129,18 @@ const SpecialEventd = () => {
                                     <div data-bs-interval="2000" className="carousel-item">
                                         <div className='row justify-content-center align-items-center h-100'>
                                             <div className='col-md-6'>
-                                                <div className='row align-items-stretch' style={{ height: '350px', overflow: 'hidden', borderRadius: '10px', position: 'relative' }}>
+                                                <div className='align-items-stretch' style={{ height: '350px', overflow: 'hidden', borderRadius: '10px', position: 'relative' }}>
                                                     <div className='eventDate' style={{zIndex: '9'}}>
                                                         <div className='eventDateText'>
                                                             {event.startDate}
                                                         </div>
                                                     </div>
                                                     <div className='col-12 p-0 h-100' style={{ overflow: 'hidden' }}>
-                                                        <img className="w-100 h-100" style={{ objectFit: 'cover' }} src={`${event.image}`} alt="Image Title" />
+                                                        <Image width={100} height={100} className="w-100 h-100" style={{ objectFit: 'cover' }} src={event.image} alt="Image Title" />
                                                     </div>
                                                     <div className='col-12 m-0 p-0 bg-white row align-items-center justify-content-center' style={{position: 'absolute', top: '63px', opacity: '0.777'}}>
                                                         <div className='text-center col-11'>
-                                                            <h2 className="text-dark text-uppercase fw-bold">{event.title}</h2>
+                                                            <h1 className="text-dark text-uppercase fw-bold">{event.title}</h1>
                                                             <div className='text-dark'>
                                                                 {event.description}
                                                             </div>

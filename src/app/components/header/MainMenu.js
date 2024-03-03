@@ -91,8 +91,7 @@ const MainMenu = (device,isSlider) => {
   // };
 
   const hideMenu = () => {
-    document.getElementById("navFade").style.transition =
-      "opacity 0.5s, transform 1.5s";
+    document.getElementById("navFade").style.transition ="opacity 0.5s, transform 1.5s";
     document.getElementById("navFade").style.opacity = "0";
     document.getElementById("navFade").style.transform = "translateX(150%)";
     setMenuPresent(false);
@@ -187,21 +186,21 @@ const MainMenu = (device,isSlider) => {
 
           <div className="row">
             <div className="col">
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul id="navFade" className="navbar-nav ms-auto" style={{}}>
+              <div className=" navbar-collapse" id="navbarNav">
+                <ul id="navFade" className="navbar-nav ms-auto" style={{textTransform: "uppercase"}}>
                   <li className="nav-item">
-                    <Link className={"nav-link active"} href="/">
+                    <Link className={"nav-link active fLoto"} href="/">
                         Home
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link className={
-                          "nav-link"
+                          "nav-link fLoto"
                         } href="/about">
                         AboutUs
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item fLoto">
                       <Link className="nav-link" 
                       href="/waitings">
                           waiting times
@@ -248,7 +247,7 @@ const MainMenu = (device,isSlider) => {
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item text-capitalize" href="/toolslink">
+                        <Link className="dropdown-item text-capitalize " href="/toolslink">
                             Tools videos and links
                         </Link>
                       </li>
@@ -257,21 +256,21 @@ const MainMenu = (device,isSlider) => {
 
                   <li className="nav-item">
                     <Link className={
-                          "nav-link"
+                          "nav-link fLoto"
                         } href="/career">
                        Career
                     </Link>
                   </li>
 
-                  <button className="nav-item btn btn-warning ms-2">
-                    <Link href="/register">
-                      <div>Register now</div>
+                  <button className="nav-item btn btn-warning  ms-2">
+                    <Link className='text-dark' href="/register">
+                      <div className='fLoto'>Register now</div>
                     </Link>
                   </button>
 
                   <button className="nav-item btn btn-danger ms-2">
-                    <Link href="/contact">
-                      <div>Contact us</div>
+                    <Link className='text-light ' href="/contact">
+                      <div className='fLoto'>Contact us</div>
                     </Link>
                   </button>
                   {/* <form className="d-none d-lg-flex ms-lg-2">
@@ -288,11 +287,11 @@ const MainMenu = (device,isSlider) => {
                   {" "}
                   {menuPresent ? (
                     <button onClick={hideMenu} className="btn">
-                      <Image  sizes="100vw" src={closeIcon.src} width={32} height={32} />
+                      <Image  sizes="100vw" src={closeIcon.src} width={32} height={32} alt='menu icon' />
                     </button>
                   ) : (
                     <button onClick={showMenu} className="btn">
-                      <Image src={menuIcon.src} width={32} height={32} />
+                      <Image src={menuIcon.src} width={32} height={32} alt='menu icon'/>
                     </button>
                   )}
                 </div>
