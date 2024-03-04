@@ -42,7 +42,7 @@ const WhyUs = () => {
                  loading="lazy"
                  src={imageIcon1.src} 
                  alt="icon 1" />
-                <h5 className="mt-4 mb-4">Empathetic Professionals</h5>
+                <h4 className="mt-4 mb-4 fLoto fw-bold">Empathetic Professionals</h4>
                 <p className='h-30'>Our professionals possess the ability to understand and share the feelings of others.They are compassionate,kind-hearted,and possess a high level of emotional intelligence.</p>
                 <button type="button" className='btn bg-dark text-light posh-button'>View more</button>
               </div>
@@ -55,7 +55,7 @@ const WhyUs = () => {
                 loading="lazy" 
                 src={imageIcon2.src} 
                 alt="icon 2" />
-                <h5 className="mt-4 mb-4">Intensive care</h5>
+                <h4 className="mt-4 mb-4 fLoto fw-bold">Intensive care</h4>
                 <p className='h-30'>We listen actively to our clients concerns and try to see things from their perspective, which enables them to provide personalized and effective care.</p>
                 </div>
                 <button type="button" className='btn bg-dark text-light posh-button'>View more</button>
@@ -68,7 +68,7 @@ const WhyUs = () => {
                 loading="lazy" 
                 src={imageIcon3.src} 
                 alt="icon 3" />
-                <h5 className="mt-4 mb-4">Certified therapist</h5>
+                <h4 className="mt-4 mb-4 fLoto fw-bold">Certified therapist</h4>
                 <p className='h-30'>Our therapists are professional and certified. We follow ethical guidelines and maintain strict confidentiality to ensure the safety and privacy of our clients.</p>
                 <button type="button" className='btn bg-dark text-light posh-button'>View more</button>
               </div>

@@ -200,15 +200,15 @@ const MainMenu = (device,isSlider) => {
                         AboutUs
                     </Link>
                   </li>
-                  <li className="nav-item fLoto">
-                      <Link className="nav-link" 
+                  <li className="nav-item ">
+                      <Link className="nav-link fLoto" 
                       href="/waitings">
                           waiting times
                       </Link>
                     </li>
                   <li className="nav-item dropdown">
                     <Link className={
-                            "nav-link dropdown-toggle"
+                            "nav-link dropdown-toggle fLoto"
                         } href="/service" data-bs-toggle="dropdown">
                         Services
                     </Link>
