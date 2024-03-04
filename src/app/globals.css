@@ -103,7 +103,6 @@ a {
 /* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Lato:wght@100;300;400;700;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:wght@400;900&family=Smooch&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
 /* Import Custom Fonts */
 /* @font-face {
   font-family: Quentin;
@@ -113,7 +112,7 @@ a {
 /* Global Styles */
 /* font */
 body {
-  font-family: "LATO", serif !important;
+  font-family: var(--font-lato), serif !important;
   overflow-x: hidden;
   /* background-color: #2a3133 !important; */
   background-color: rgb(250, 250, 250) !important;
@@ -147,7 +146,7 @@ h1 {
   font-weight: 700;
 }
 .nuts-f{
-   font-family: Grape Nuts !important;
+   font-family: var(--font-GrapeNuts) !important;
   }
 h2 {
   /* font-family: "Roboto", sans-serif; */
@@ -173,7 +172,7 @@ button,
   font-family: "Roboto", sans-serif;
 }
 .fLoto{
-  font-family: "LATO", serif !important;
+  font-family: var(--font-lato), serif !important;
 }
 .font-handwriting {
   /* font-family: "Quentin", sans-serif; */
@@ -1016,7 +1015,7 @@ button,
 }
 
 a {
-  font-family: "LATO";
+  font-family: var(--font-lato);
   font-weight: 600;
   font-size: 15px;
   line-height: 1.7;

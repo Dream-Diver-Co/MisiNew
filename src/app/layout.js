@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter, Lato, Grape_Nuts,Playfair} from "next/font/google";
 import 'aos/dist/aos.css';
 import "./globals.css";
 import "./styles.css";
@@ -9,10 +9,23 @@ import "./IdealBankSectionStyles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './page.module.css';
 import Footer from "./components/footer/Footer";
-import ScrollToTop from "./components/scrolling/ScrollToTop";
 import Script from "next/script";
-
 const inter = Inter({ subsets: ["latin"] });
+const Loto_init = Lato({
+  subsets: ['latin'],
+  weight: ['100','300','400','700','900'],
+  variable:'--font-lato',
+});
+const GrapeNuts_init = Grape_Nuts({
+  subsets: ['latin'],
+  weight: '400',
+  variable:'--font-GrapeNuts',
+});
+const Playfair_init = Playfair({
+  subsets: ['cyrillic'],
+  weight: ['300','400','500','600','700','800','900'],
+  variable:'--font-Playfair',
+});
 
 export const metadata = {
   title: "Misi Nueropsy",
@@ -22,7 +35,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${Loto_init.variable} ${GrapeNuts_init.variable} ${Playfair_init.variable}`}>
         
         {children}
         <Footer/>
