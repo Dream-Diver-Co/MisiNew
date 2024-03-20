@@ -1,37 +1,42 @@
-'use client'
-import MainMenu from './MainMenu';
-import slide1 from '@../../../public/images/header/header1.jpeg';
-import slide2 from '@../../../public/images/header/header2.jpeg';
-import slide3 from '@../../../public/images/header/header3.webp';
-import { EffectCreative } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import React, { useState } from 'react';
-import 'swiper/css';
-import 'swiper/css/effect-creative';
+"use client";
+import MainMenu from "./MainMenu";
+import slide1 from "@../../../public/images/header/header1.jpeg";
+import slide2 from "@../../../public/images/header/header2.jpeg";
+import slide3 from "@../../../public/images/header/header3.webp";
+import { EffectCreative } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import React, { useState } from "react";
+import "swiper/css";
+import "swiper/css/effect-creative";
 
 const headerData = [
-    {
-      image: slide1,
-      text: "Love your Life"
-    },
-    {
-      image: slide2,
-      text: "Turn the stress into strength"
-    },
-    {
-      image: slide3,
-      text: "Heal the heart"
-    },
-  ]
-  
-  const HeaderText = ({text, index}) => {
-  
-    return (
-      <div id={`testAnim${index}`} className="mx-auto text-center w-100 testAnimSlideIn homeTexts"  >
-        {/* <p className="font-weight-600" style={{ fontSize: '3rem' }}  ><span style={{ fontFamily: "Grape Nuts",color:"transparent" }}> ... </span></p> */}
-        <div className="font-weight-600 text-white" style={{ fontSize: '5rem', }}> {text} </div>
-        {/* <div className='d-flex mt-5 justify-content-center align-items-center'>
+  {
+    image: slide1,
+    text: "Love your Life",
+  },
+  {
+    image: slide2,
+    text: "Turn the stress into strength",
+  },
+  {
+    image: slide3,
+    text: "Heal the heart",
+  },
+];
+
+const HeaderText = ({ text, index }) => {
+  return (
+    <div
+      id={`testAnim${index}`}
+      className="mx-auto text-center w-100 testAnimSlideIn homeTexts"
+    >
+      {/* <p className="font-weight-600" style={{ fontSize: '3rem' }}  ><span style={{ fontFamily: "Grape Nuts",color:"transparent" }}> ... </span></p> */}
+      <div className="font-weight-600 text-white" style={{ fontSize: "5rem" }}>
+        {" "}
+        {text}{" "}
+      </div>
+      {/* <div className='d-flex mt-5 justify-content-center align-items-center'>
   
           <Link href="/reservation">
             <button type="button" className=" btn posh-button text-light rounded-3 font-weight-900 " >
@@ -43,15 +48,14 @@ const headerData = [
             <span>Order now</span>
           </a>
         </div> */}
-      </div>
-  
-    )
-  }
+    </div>
+  );
+};
 
 const Hero = () => {
   return (
     <>
-    <Swiper
+      <Swiper
         grabCursor={true}
         effect={"creative"}
         spaceBetween={30}
@@ -68,37 +72,59 @@ const Hero = () => {
         modules={[Autoplay]}
         className="mySwiper3"
         edgeSwipeDetection={false}
-        onSlideChange={
-          (e) => {
-            console.log("change", e.activeIndex);
-            setTimeout(() => {
-              // document.getElementById(`testAnim${e.activeIndex + 1}`)?.classList.add('testAnimSlideOut');
-              // document.getElementById(`testAnim${e.activeIndex - 1}`)?.classList.add('testAnimSlideOut');
+        onSlideChange={(e) => {
+          console.log("change", e.activeIndex);
+          setTimeout(() => {
+            // document.getElementById(`testAnim${e.activeIndex + 1}`)?.classList.add('testAnimSlideOut');
+            // document.getElementById(`testAnim${e.activeIndex - 1}`)?.classList.add('testAnimSlideOut');
 
-              document.getElementById(`testAnim${e.activeIndex - 1}`)?.classList.remove('testAnimSlideIn');
-              document.getElementById(`testAnim${e.activeIndex + 1}`)?.classList.remove('testAnimSlideIn');
+            document
+              .getElementById(`testAnim${e.activeIndex - 1}`)
+              ?.classList.remove("testAnimSlideIn");
+            document
+              .getElementById(`testAnim${e.activeIndex + 1}`)
+              ?.classList.remove("testAnimSlideIn");
 
-              document.getElementById(`testAnim${e.activeIndex}`)?.classList.add('testAnimSlideIn');
+            document
+              .getElementById(`testAnim${e.activeIndex}`)
+              ?.classList.add("testAnimSlideIn");
 
-              document.getElementById(`ken${e.activeIndex - 1}`)?.classList.remove('ken');
-              document.getElementById(`ken${e.activeIndex + 1}`)?.classList.remove('ken');
-              document.getElementById(`ken${e.activeIndex}`)?.classList.add('ken');
-
-            }, 100)
-          }}
+            document
+              .getElementById(`ken${e.activeIndex - 1}`)
+              ?.classList.remove("ken");
+            document
+              .getElementById(`ken${e.activeIndex + 1}`)
+              ?.classList.remove("ken");
+            document
+              .getElementById(`ken${e.activeIndex}`)
+              ?.classList.add("ken");
+          }, 100);
+        }}
       >
         {headerData.map((data, index) => (
           <SwiperSlide key={index}>
-            <div id={`ken${index}`} className='ken' style={{ position: 'relative', width: '100%', height: '100%', overflow: 'hidden' }}>
-              <img src={data.image.src} style={{ width: '100%', height: '40rem', objectFit: 'cover' }} alt="..." />
+            <div
+              id={`ken${index}`}
+              className="ken"
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "100%",
+                overflow: "hidden",
+              }}
+            >
+              <img
+                src={data.image.src}
+                style={{ width: "100%", height: "100vh", objectFit: "cover" }}
+                alt="HERO"
+              />
             </div>
             <HeaderText text={data.text} index={index} />
           </SwiperSlide>
         ))}
-
       </Swiper>
     </>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

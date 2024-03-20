@@ -1,36 +1,41 @@
-'use client'
-import MainMenu from './MainMenu';
-import slide1 from '@../../../public/images/header/header1.jpeg';
-import slide2 from '@../../../public/images/header/header2.jpeg';
-import slide3 from '@../../../public/images/header/header3.webp';
-import { EffectCreative } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import React, { useState } from 'react';
-import 'swiper/css';
-import 'swiper/css/effect-creative';
+"use client";
+import MainMenu from "./MainMenu";
+import slide1 from "@../../../public/images/header/header1.jpeg";
+import slide2 from "@../../../public/images/header/header2.jpeg";
+import slide3 from "@../../../public/images/header/header3.webp";
+import { EffectCreative } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import React, { useState } from "react";
+import "swiper/css";
+import "swiper/css/effect-creative";
 
 const headerData = [
   {
     image: slide1,
-    text: "Love your Life"
+    text: "Love your Life",
   },
   {
     image: slide2,
-    text: "Turn the stress into strength"
+    text: "Turn the stress into strength",
   },
   {
     image: slide3,
-    text: "Heal the heart"
+    text: "Heal the heart",
   },
-]
+];
 
-const HeaderText = ({text, index}) => {
-
+const HeaderText = ({ text, index }) => {
   return (
-    <div id={`testAnim${index}`} className="mx-auto text-center w-100 testAnimSlideIn homeTexts"  >
+    <div
+      id={`testAnim${index}`}
+      className="mx-auto text-center w-100 testAnimSlideIn homeTexts"
+    >
       {/* <p className="font-weight-600" style={{ fontSize: '3rem' }}  ><span style={{ fontFamily: "Grape Nuts",color:"transparent" }}> ... </span></p> */}
-      <div className="font-weight-600 text-white" style={{ fontSize: '5rem', }}> {text} </div>
+      <div className="font-weight-600 text-white" style={{ fontSize: "5rem" }}>
+        {" "}
+        {text}{" "}
+      </div>
       {/* <div className='d-flex mt-5 justify-content-center align-items-center'>
 
         <Link href="/reservation">
@@ -44,14 +49,13 @@ const HeaderText = ({text, index}) => {
         </a>
       </div> */}
     </div>
-
-  )
-}
+  );
+};
 
 function Header() {
   return (
     <header>
-      <MainMenu isSlider={true}/>
+      <MainMenu isSlider={true} />
     </header>
   );
 }
