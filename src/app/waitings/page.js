@@ -1,18 +1,20 @@
-import React from 'react'
-import '@/app/page.module.css'
-import '@/app/booking.css'
-import '@/app/embala.css'
-import '@/app/globals.css'
-import '@/app/IdealBankSectionStyles.css'
-import '@/app/responsive.css'
-import '@/app/styles.css'
-import Heder from '../components/about/Heder'
+import React from "react";
+import "@/app/page.module.css";
+import "@/app/booking.css";
+import "@/app/embala.css";
+import "@/app/globals.css";
+import "@/app/IdealBankSectionStyles.css";
+import "@/app/responsive.css";
+import "@/app/styles.css";
+import Heder from "../components/about/Heder";
+import ScrollToTop from "../components/scrolling/ScrollToTop";
 
 const page = () => {
   return (
     <div>
       <Heder title={"Waiting times"} image={"waitHeader"}></Heder>
       <div>
+        <ScrollToTop />
         <div className="container text editable-text left mt-5">
           <>
             <h2>Waiting times</h2>
@@ -70,7 +72,7 @@ const page = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

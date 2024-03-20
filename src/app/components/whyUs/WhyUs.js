@@ -1,16 +1,17 @@
-'use client'
-import React,{ useContext, useEffect ,useRef} from 'react'
-import CountUp from 'react-countup';
-import imageIcon1 from '@/../../public/images/why/1.png';
-import imageIcon2 from '@/../../public/images/why/2.png';
-import imageIcon3 from '@/../../public/images/why/3.png';
-import Image from 'next/image';
+"use client";
+import React, { useContext, useEffect, useRef } from "react";
+import CountUp from "react-countup";
+import imageIcon1 from "@/../../public/images/why/1.png";
+import imageIcon2 from "@/../../public/images/why/2.png";
+import imageIcon3 from "@/../../public/images/why/3.png";
+import Image from "next/image";
+import "@/app/globals.css";
 const WhyUs = () => {
   // const [state] = useContext(null);
   // const [clicked, setClicked] = React.useState(false);
 
   useEffect(() => {
-    document.addEventListener('scroll', countUpAnimation);
+    document.addEventListener("scroll", countUpAnimation);
   }, []);
 
   let event = false;
@@ -20,122 +21,175 @@ const WhyUs = () => {
     } else {
       if (!event) {
         event = false;
-        document.getElementById('clickButton').click();
-        document.getElementById('clickButton2').click();
-        document.getElementById('clickButton3').click();
-        document.getElementById('clickButton4').click();
+        document.getElementById("clickButton").click();
+        document.getElementById("clickButton2").click();
+        document.getElementById("clickButton3").click();
+        document.getElementById("clickButton4").click();
       }
     }
-  }
+  };
   return (
     <section id="why-us" className="pt-3">
       <div className="container">
         <div className="row pt-5">
           <div className="col py-5 text-center">
-            <h1 className="h1-margin-bottom font-weight-700" style={{ fontSize: '48px' }}>Why people choose us?</h1>
-            <h6 className=''>People choose us for our best servives</h6>
+            <h1
+              className="h1-margin-bottom font-weight-700"
+              style={{ fontSize: "48px" }}
+            >
+              Why people choose us?
+            </h1>
+            <h6 className="text-black">
+              People choose us for our best servives
+            </h6>
             <div className="row m-5">
-              <div className="col-md-4 mb-3">
+              <div className="col-md-4 px-5">
                 <Image
-                width="120"
-                height="120"
-                 loading="lazy"
-                 src={imageIcon1.src} 
-                 alt="icon 1" />
-                <h4 className="mt-4 mb-4 fLoto fw-bold">Empathetic Professionals</h4>
-                <p className='h-30'>Our professionals possess the ability to understand and share the feelings of others.They are compassionate,kind-hearted,and possess a high level of emotional intelligence.</p>
-                <button type="button" className='btn bg-dark text-light posh-button'>View more</button>
+                  width="120"
+                  height="120"
+                  loading="lazy"
+                  src={imageIcon1.src}
+                  alt="icon 1"
+                />
+                <h4 className="mt-4 mb-4 fLoto fw-bold">
+                  Empathetic Professionals
+                </h4>
+                <p className="h-30">
+                  Our professionals possess the ability to understand and share
+                  the feelings of others.They are compassionate,kind-hearted,and
+                  possess a high level of emotional intelligence.
+                </p>
+                <button type="button" className="btn posh-button">
+                  View more
+                </button>
               </div>
-              <div className="col-md-4 mb-3">
+              <div className="col-md-4 px-5">
                 <div>
-                <Image
-                width="120"
-                height="120"
-                className='img-fluid'
-                loading="lazy" 
-                src={imageIcon2.src} 
-                alt="icon 2" />
-                <h4 className="mt-4 mb-4 fLoto fw-bold">Intensive care</h4>
-                <p className='h-30'>We listen actively to our clients concerns and try to see things from their perspective, which enables them to provide personalized and effective care.</p>
+                  <Image
+                    width="120"
+                    height="120"
+                    className="img-fluid"
+                    loading="lazy"
+                    src={imageIcon2.src}
+                    alt="icon 2"
+                  />
+                  <h4 className="mt-4 mb-4 fLoto fw-bold">Intensive care</h4>
+                  <p className="h-30">
+                    We listen actively to our clients concerns and try to see
+                    things from their perspective, which enables them to provide
+                    personalized and effective care.
+                  </p>
                 </div>
-                <button type="button" className='btn bg-dark text-light posh-button'>View more</button>
+                <button type="button" className="btn posh-button">
+                  View more
+                </button>
               </div>
-              <div className="col-md-4 mb-3">
+              <div className="col-md-4 px-5">
                 <Image
-                width="120"
-                height="120"
-                className='img-fluid'
-                loading="lazy" 
-                src={imageIcon3.src} 
-                alt="icon 3" />
+                  width="120"
+                  height="120"
+                  className="img-fluid"
+                  loading="lazy"
+                  src={imageIcon3.src}
+                  alt="icon 3"
+                />
                 <h4 className="mt-4 mb-4 fLoto fw-bold">Certified therapist</h4>
-                <p className='h-30'>Our therapists are professional and certified. We follow ethical guidelines and maintain strict confidentiality to ensure the safety and privacy of our clients.</p>
-                <button type="button" className='btn bg-dark text-light posh-button'>View more</button>
+                <p className="h-30">
+                  Our therapists are professional and certified. We follow
+                  ethical guidelines and maintain strict confidentiality to
+                  ensure the safety and privacy of our clients.
+                </p>
+                <button type="button" className="btn posh-button">
+                  View more
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <hr/>
-        <div className='row text-center mt-3'>
-          <div className='col-3'>
-            <h1 className='fw-bolder'>
+        <hr />
+        <div className="row text-center mt-3">
+          <div className="col-3">
+            <h1 className="fw-bolder">
               <CountUp duration={3} useEasing start={100} end={200} suffix="+">
                 {({ countUpRef, start }) => (
                   <div>
                     <span ref={countUpRef} />
-                    <button id='clickButton' style={{ display: 'none' }} onClick={start}>Start</button>
+                    <button
+                      id="clickButton"
+                      style={{ display: "none" }}
+                      onClick={start}
+                    >
+                      Start
+                    </button>
                   </div>
                 )}
               </CountUp>
             </h1>
-            <h6 className='fw-bolder'>Visitors daily</h6>
+            <h6 className="fw-bolder">Visitors daily</h6>
           </div>
-          <div className='col-3'>
-            <h1 className='fw-bolder'>
+          <div className="col-3">
+            <h1 className="fw-bolder">
               <CountUp duration={3} useEasing start={0} end={30} suffix="+">
                 {({ countUpRef, start }) => (
                   <div>
                     <span ref={countUpRef} />
-                    <button id='clickButton2' style={{ display: 'none' }} onClick={start}>Start</button>
+                    <button
+                      id="clickButton2"
+                      style={{ display: "none" }}
+                      onClick={start}
+                    >
+                      Start
+                    </button>
                   </div>
                 )}
               </CountUp>
             </h1>
-            <h6 className='fw-bolder'>Therapists</h6>
+            <h6 className="fw-bolder">Therapists</h6>
           </div>
-          <div className='col-3'>
-            <h1 className='fw-bolder'>
+          <div className="col-3">
+            <h1 className="fw-bolder">
               <CountUp duration={3} useEasing start={0} end={100} suffix="%">
                 {({ countUpRef, start }) => (
                   <div>
                     <span ref={countUpRef} />
-                    <button id='clickButton3' style={{ display: 'none' }} onClick={start}>Start</button>
+                    <button
+                      id="clickButton3"
+                      style={{ display: "none" }}
+                      onClick={start}
+                    >
+                      Start
+                    </button>
                   </div>
                 )}
               </CountUp>
             </h1>
-            <h6 className='fw-bolder'>Positive feedback</h6>
+            <h6 className="fw-bolder">Positive feedback</h6>
           </div>
-          <div className='col-3'>
-            <h1 className='fw-bolder'>
+          <div className="col-3">
+            <h1 className="fw-bolder">
               <CountUp duration={3} useEasing start={0} end={50} suffix="+">
                 {({ countUpRef, start }) => (
                   <div>
                     <span ref={countUpRef} />
-                    <button id='clickButton4' style={{ display: 'none' }} onClick={start}>Start</button>
+                    <button
+                      id="clickButton4"
+                      style={{ display: "none" }}
+                      onClick={start}
+                    >
+                      Start
+                    </button>
                   </div>
                 )}
               </CountUp>
             </h1>
-            <h6 className='fw-bolder'>Awards & honors</h6>
+            <h6 className="fw-bolder">Awards & honors</h6>
           </div>
         </div>
 
-        <hr/>
+        <hr />
       </div>
-
     </section>
-  )
-}
+  );
+};
 
-export default WhyUs
+export default WhyUs;

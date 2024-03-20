@@ -1,17 +1,17 @@
-'use client'
-import React from 'react'
-import Link from 'next/link';
+"use client";
+import React from "react";
+import Link from "next/link";
 import { useContext } from "react";
-import '@/app/responsive.css'
-import '@/app/styles.css'
-import '@/app/booking.css'
-import '@/app/embala.css'
-import '@/app/page.module.css'
+import "@/app/responsive.css";
+import "@/app/styles.css";
+import "@/app/booking.css";
+import "@/app/embala.css";
+import "@/app/page.module.css";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import imageLogoBig from "@../../../public/images/misilogo.png";
 import Map from "@/app/components/contact/Map";
-import Image from 'next/image';
-import LanguageDropdown from '../header/LanguageDropdown';
+import Image from "next/image";
+import LanguageDropdown from "../header/LanguageDropdown";
 const Footer = () => {
   return (
     <>
@@ -60,8 +60,8 @@ const Footer = () => {
               <ul className="social-nav navbar-nav flex-row justify-content-center justify-content-md-start mb-4">
                 <li className="nav-item">
                   <Link
-                    className="nav-link text-white"
-                    href="#"
+                    className="nav-link"
+                    href="/"
                     rel="noreferrer"
                     target="_blank"
                   >
@@ -70,8 +70,8 @@ const Footer = () => {
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="nav-link text-white"
-                    href="#"
+                    className="nav-link "
+                    href="/"
                     rel="noreferrer"
                     target="_blank"
                   >
@@ -83,25 +83,25 @@ const Footer = () => {
             <div className="col-md-6 col-lg-3 mb-3">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                    <Link className="nav-link text-black active" href="/">
-                      Home
-                    </Link>
+                  <Link className="nav-link text-black active" href="/">
+                    Home
+                  </Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link text-black" href="/about">
-                      AboutUs
-                    </Link>
+                  <Link className="nav-link text-black" href="/about">
+                    AboutUs
+                  </Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link text-black" href="/service">
-                      Services
-                    </Link>
+                  <Link className="nav-link text-black" href="/service">
+                    Services
+                  </Link>
                 </li>
 
                 <li className="nav-item">
-                    <Link className="nav-link text-black" href="/career">
-                      Career
-                    </Link>
+                  <Link className="nav-link text-black" href="/career">
+                    Career
+                  </Link>
                 </li>
               </ul>
               <LanguageDropdown></LanguageDropdown>
@@ -113,8 +113,8 @@ const Footer = () => {
                 <p>
                   <strong>Telefoon</strong>
                   <br />
-                  <Link href="Tel:+316%202818%203284">+316 2818 3284</Link>&nbsp;(Voor
-                  zorginhoudelijke vragen, 24/7 bereikbaar)
+                  <Link href="Tel:+316%202818%203284">+316 2818 3284</Link>
+                  &nbsp;(Voor zorginhoudelijke vragen, 24/7 bereikbaar)
                   <br />
                   +3110 333 1901
                 </p>{" "}
@@ -148,9 +148,11 @@ const Footer = () => {
             Developed
             <Link
               href="https://www.linkedin.com/in/sakib6619/"
-              className='text-light'
-            > by</Link>
-             {" "}
+              className="text-light"
+            >
+              {" "}
+              by
+            </Link>{" "}
             <Link
               href="https://dreamdiver.nl/"
               rel="noreferrer"
@@ -162,7 +164,7 @@ const Footer = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
