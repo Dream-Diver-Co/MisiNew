@@ -9,6 +9,7 @@ import "@/app/IdealBankSectionStyles.css";
 import "@/app/responsive.css";
 import "@/app/styles.css";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
+import LanguageDropdown from "../components/header/LanguageDropdown";
 const page = () => {
   return (
     <div>
@@ -24,6 +25,7 @@ const page = () => {
           </div>
           Login
         </div>
+        <LanguageDropdown />
       </div>
       <div
         className="row align-items-center justify-content-center"

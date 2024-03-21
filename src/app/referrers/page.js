@@ -1,12 +1,13 @@
-import React from 'react'
-import '@/app/page.module.css'
-import '@/app/booking.css'
-import '@/app/embala.css'
-import '@/app/globals.css'
-import '@/app/IdealBankSectionStyles.css'
-import '@/app/responsive.css'
-import '@/app/styles.css'
-import Heder from '../components/about/Heder'
+import React from "react";
+import "@/app/page.module.css";
+import "@/app/booking.css";
+import "@/app/embala.css";
+import "@/app/globals.css";
+import "@/app/IdealBankSectionStyles.css";
+import "@/app/responsive.css";
+import "@/app/styles.css";
+import "@/app/referrers/referrers.css";
+import Heder from "../components/about/Heder";
 
 const page = () => {
   return (
@@ -95,27 +96,44 @@ const page = () => {
           </p>
           <p>
             Silver Cross?&nbsp;Go to:&nbsp;
-            <a href="https://www.zilverenkruis.nl/consumenten/zorg-regelen/wachtlijstbemiddeling">
+            <a
+              className="custom-a"
+              href="https://www.zilverenkruis.nl/consumenten/zorg-regelen/wachtlijstbemiddeling"
+            >
               link
             </a>
             <br />
             FBTO?&nbsp;Go to:&nbsp;
-            <a href="https://www.fbto.nl/zorgverzekering/zorgadvies">link</a>
+            <a
+              className="custom-a"
+              href="https://www.fbto.nl/zorgverzekering/zorgadvies"
+            >
+              link
+            </a>
             <br />
             De Friesland?&nbsp;Go to:&nbsp;
-            <a href="https://www.defriesland.nl/zorgwijzer/wachtlijstbemiddeling">
+            <a
+              className="custom-a"
+              href="https://www.defriesland.nl/zorgwijzer/wachtlijstbemiddeling"
+            >
               link
             </a>
             <br />
             Interpolis?&nbsp;Go to:&nbsp;
-            <a href="https://www.interpolis.nl/service/zorg/persoonlijke-hulp-bij-regelen-van-zorg">
+            <a
+              className="custom-a"
+              href="https://www.interpolis.nl/service/zorg/persoonlijke-hulp-bij-regelen-van-zorg"
+            >
               link&nbsp;
             </a>
           </p>
           <p>
             Menzis (including Menzis, Anderzorg, HEMA and VinkVink)?&nbsp;Go
             to:&nbsp;
-            <a href="https://www.menzis.nl/zorg-en-vergoedingen/wachtlijstbemiddeling">
+            <a
+              className="custom-a"
+              href="https://www.menzis.nl/zorg-en-vergoedingen/wachtlijstbemiddeling"
+            >
               link
             </a>
           </p>
@@ -155,7 +173,7 @@ const page = () => {
         </>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

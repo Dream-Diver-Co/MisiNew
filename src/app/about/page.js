@@ -1,17 +1,18 @@
-import React from 'react'
+import React from "react";
 import Link from "next/link";
-import Image from 'next/image';
-import '@/app/page.module.css'
-import '@/app/booking.css'
-import '@/app/embala.css'
-import '@/app/globals.css'
-import '@/app/IdealBankSectionStyles.css'
-import '@/app/responsive.css'
-import '@/app/styles.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Head from 'next/head';
-import Heder from '../components/about/Heder';
-import ScrollToTop from '../components/scrolling/ScrollToTop';
+import Image from "next/image";
+import "@/app/page.module.css";
+import "@/app/booking.css";
+import "@/app/embala.css";
+import "@/app/globals.css";
+import "@/app/IdealBankSectionStyles.css";
+import "@/app/responsive.css";
+import "@/app/styles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Head from "next/head";
+import Heder from "../components/about/Heder";
+import ScrollToTop from "../components/scrolling/ScrollToTop";
+import "@/app/referrers/referrers.css";
 const about = () => {
   return (
     <div>
@@ -19,7 +20,7 @@ const about = () => {
         <title>About</title>
       </Head>
       <Heder />
-      <ScrollToTop/>
+      <ScrollToTop />
       <div className="container pt-4">
         <ul
           className="nav nav-tabs justify-content-center"
@@ -1168,6 +1169,7 @@ const about = () => {
                   <br />
                   Sign up via &nbsp;
                   <a
+                    className="custom-a"
                     href="https://www.misineuropsy.nl/Mario-project.nl"
                     target="_blank"
                     rel="noreferrer"
@@ -1192,7 +1194,10 @@ const about = () => {
                   </strong>
                   <br />
                   You can read this interview via the following link:&nbsp;
-                  <a href="https://idemrotterdam.nl/lea-jabbarian-interculturele-communicatie-kun-je-leren-en-blijven-ontwikkelen/">
+                  <a
+                    className="custom-a"
+                    href="https://idemrotterdam.nl/lea-jabbarian-interculturele-communicatie-kun-je-leren-en-blijven-ontwikkelen/"
+                  >
                     https://idemrotterdam.nl/lea-jabbarian-interculturele-communicatie-kun-je-leren-en-blijven-ontontwikkeling
                     /
                   </a>
@@ -1220,11 +1225,21 @@ const about = () => {
                   Do you have questions about our working method, treatments or
                   do you want to make an appointment?&nbsp;Please feel free
                   &nbsp;
-                  <a href="https://www.misineuropsy.nl/contact">to contact</a>
+                  <a
+                    className="custom-a"
+                    href="https://www.misineuropsy.nl/contact"
+                  >
+                    to contact
+                  </a>
                   &nbsp; us.&nbsp;To register with MiSi NeuroPsy you can
                   &nbsp;go&nbsp;
-                  <a href="https://www.misineuropsy.nl/aanmelden">here</a>&nbsp;
-                  .
+                  <a
+                    className="custom-a"
+                    href="https://www.misineuropsy.nl/aanmelden"
+                  >
+                    here
+                  </a>
+                  &nbsp; .
                 </p>
                 <Link href="/contact">
                   <p className="btn btn-sm btn-dark">CONTACT</p>
@@ -1404,6 +1419,7 @@ const about = () => {
                     href="https://www.degeschillencommissiezorg.nl/"
                     target="_blank"
                     rel="noreferrer"
+                    className="custom-hb custom-a"
                   >
                     De Geschillencommissie Zorg.
                   </a>
@@ -1413,9 +1429,8 @@ const about = () => {
           </div>
         </div>
       </div>
-      </div>
-    
-  )
-}
+    </div>
+  );
+};
 
-export default about
+export default about;
