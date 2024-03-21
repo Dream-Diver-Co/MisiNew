@@ -1,44 +1,45 @@
-'use client'
-import React,{ useState } from 'react'
-import Head from 'next/head'
-import '@/app/page.module.css'
-import '@/app/booking.css'
-import '@/app/embala.css'
-import '@/app/globals.css'
-import '@/app/IdealBankSectionStyles.css'
-import '@/app/responsive.css'
-import '@/app/styles.css'
+"use client";
+import React, { useState } from "react";
+import Head from "next/head";
+import "@/app/page.module.css";
+import "@/app/booking.css";
+import "@/app/embala.css";
+import "@/app/globals.css";
+import "@/app/IdealBankSectionStyles.css";
+import "@/app/responsive.css";
+import "@/app/styles.css";
 import jobImage1 from "@../../../public/images/jobs/job1.jpg";
 import Link from "next/link";
-import Heder from '../components/about/Heder';
-import Image from 'next/image'
+import Heder from "../components/about/Heder";
+import Image from "next/image";
+import ScrollToTop from "../components/scrolling/ScrollToTop";
 const Page = () => {
-    const [jobs, setJobs] = useState([
-        {
-          id: 1,
-          title: "Vacancy: Front office employee",
-          description: "",
-          image: "https://picsum.photos/200?random=1",
-        },
-        {
-          id: 2,
-          title: "Vacancy: Psychologist / Neuropsychologist",
-          description: "",
-          image: "https://picsum.photos/200?random=2",
-        },
-        {
-          id: 3,
-          title: "Vacancy: GZ PSYCHOLOGIST / Psychotherapist",
-          description: "",
-          image: "https://picsum.photos/200?random=3",
-        },
-        {
-          id: 4,
-          title: "Vacancy: Psychologist Arabic",
-          description: "",
-          image: "https://picsum.photos/200?random=4",
-        },
-      ]);
+  const [jobs, setJobs] = useState([
+    {
+      id: 1,
+      title: "Vacancy: Front office employee",
+      description: "",
+      image: "https://picsum.photos/200?random=1",
+    },
+    {
+      id: 2,
+      title: "Vacancy: Psychologist / Neuropsychologist",
+      description: "",
+      image: "https://picsum.photos/200?random=2",
+    },
+    {
+      id: 3,
+      title: "Vacancy: GZ PSYCHOLOGIST / Psychotherapist",
+      description: "",
+      image: "https://picsum.photos/200?random=3",
+    },
+    {
+      id: 4,
+      title: "Vacancy: Psychologist Arabic",
+      description: "",
+      image: "https://picsum.photos/200?random=4",
+    },
+  ]);
   return (
     <div>
       <Head>
@@ -54,8 +55,9 @@ const Page = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Heder title={"Career"} image={"carHeader"} />
+      <ScrollToTop />
       <div className="container py-5">
-        <h1 className="text-center">Vacancies</h1>
+        <h1 className="text-center fw-bold">Vacancies</h1>
         <hr />
         {jobs.map((job) => (
           <div
@@ -78,7 +80,7 @@ const Page = () => {
             </div>
             <div className="col-7">
               <Link href={`/jobs/${job.id}`}>
-                <h2 className="cursor-pointer">{job.title}</h2>
+                <h2 className="cursor-pointer text-dark">{job.title}</h2>
               </Link>
               <div>{job.description}</div>
               <div>
@@ -94,7 +96,7 @@ const Page = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Head from "next/head";
+import { useRouter } from "next/router";
 import "@/app/page.module.css";
 import "@/app/booking.css";
 import "@/app/embala.css";
@@ -10,6 +10,7 @@ import "@/app/responsive.css";
 import "@/app/styles.css";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Link from "next/link";
+import LanguageDropdown from "../components/header/LanguageDropdown";
 
 const page = () => {
   return (
@@ -18,7 +19,7 @@ const page = () => {
         <div className="d-flex align-items-center" style={{ fontSize: "3rem" }}>
           <div
             className="btn btn-link"
-            onClick={() => router.back()}
+            onClick={() => router && router.back()}
             style={{ fontSize: "3rem" }}
           >
             {" "}
@@ -26,6 +27,7 @@ const page = () => {
           </div>
           Register
         </div>
+        <LanguageDropdown id="navbarLang2" navToggle={false} />
       </div>
       <div
         className="row align-items-center justify-content-center"
@@ -38,7 +40,7 @@ const page = () => {
             <form>
               <div className="mb-3">
                 <label htmlFor="inputName" className="form-label">
-                  bookingName
+                  Name
                 </label>
                 <input
                   type="text"

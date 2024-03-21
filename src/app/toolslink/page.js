@@ -1,17 +1,18 @@
-import React from 'react'
-import '@/app/page.module.css'
-import '@/app/booking.css'
-import '@/app/embala.css'
-import '@/app/globals.css'
-import '@/app/IdealBankSectionStyles.css'
-import '@/app/responsive.css'
-import '@/app/styles.css'
-import Heder from '../components/about/Heder'
+import React from "react";
+import "@/app/page.module.css";
+import "@/app/booking.css";
+import "@/app/embala.css";
+import "@/app/globals.css";
+import "@/app/IdealBankSectionStyles.css";
+import "@/app/responsive.css";
+import "@/app/styles.css";
+import "@/app/referrers/referrers.css";
+import Heder from "../components/about/Heder";
 
 const page = () => {
   return (
     <div>
-      <Heder title={"Therapy"} image={"tpHeader"}></Heder>
+      <Heder title={"Tools Videos and Links"} image={"refHeader"}></Heder>
       <div className="container text editable-text left mt-5">
         <>
           <h2>Tools, videos and links</h2>
@@ -26,6 +27,7 @@ const page = () => {
           <ul>
             <li>
               <a
+                className="custom-a"
                 href="https://www.youtube.com/watch?v=XiCrniLQGYc"
                 target="_blank"
                 rel="noreferrer"
@@ -40,6 +42,7 @@ const page = () => {
           <ul>
             <li>
               <a
+                className="custom-a"
                 href="https://www.youtube.com/watch?v=SJOjpprbfeE&feature=youtu.be"
                 target="_blank"
                 rel="noreferrer"
@@ -55,6 +58,7 @@ const page = () => {
           <ul>
             <li>
               <a
+                className="custom-a"
                 href="https://vimeo.com/52193530"
                 target="_blank"
                 rel="noreferrer"
@@ -63,6 +67,7 @@ const page = () => {
               </a>
               <br />
               <a
+                className="custom-a"
                 href="https://www.youtube.com/watch?v=yhRRHL2FNOw"
                 target="_blank"
                 rel="noreferrer"
@@ -70,6 +75,7 @@ const page = () => {
             </li>
             <li>
               <a
+                className="custom-a"
                 href="https://www.youtube.com/watch?v=yhRRHL2FNOw"
                 target="_blank"
                 rel="noreferrer"
@@ -78,6 +84,7 @@ const page = () => {
               </a>
               <br />
               <a
+                className="custom-a"
                 href="https://www.youtube.com/watch?v=DR6vKwQgWNo"
                 target="_blank"
                 rel="noreferrer"
@@ -85,6 +92,7 @@ const page = () => {
             </li>
             <li>
               <a
+                className="custom-a"
                 href="https://www.youtube.com/watch?v=DR6vKwQgWNo"
                 target="_blank"
                 rel="noreferrer"
@@ -99,6 +107,7 @@ const page = () => {
           <ul>
             <li>
               <a
+                className="custom-a"
                 href="https://youtu.be/FubVAveULcU"
                 target="_blank"
                 rel="noreferrer"
@@ -113,6 +122,7 @@ const page = () => {
           <ul>
             <li>
               <a
+                className="custom-a"
                 href="https://vimeo.com/87475678"
                 target="_blank"
                 rel="noreferrer"
@@ -127,6 +137,7 @@ const page = () => {
           <ul>
             <li>
               <a
+                className="custom-a"
                 href="https://www.timetoact.nl/"
                 target="_blank"
                 rel="noreferrer"
@@ -141,6 +152,7 @@ const page = () => {
           <ul>
             <li>
               <a
+                className="custom-a"
                 href="https://www.headspace.com/headspace-meditation-app"
                 target="_blank"
                 rel="noreferrer"
@@ -155,6 +167,7 @@ const page = () => {
           <ul>
             <li>
               <a
+                className="custom-a"
                 href="https://www.youtube.com/watch?v=iCvmsMzlF7o"
                 target="_blank"
                 rel="noreferrer"
@@ -170,6 +183,7 @@ const page = () => {
             </li>
             <li>
               <a
+                className="custom-a"
                 href="https://www.youtube.com/watch?v=RSd317TLlbc&t=196s"
                 target="_blank"
                 rel="noreferrer"
@@ -201,7 +215,7 @@ const page = () => {
         </>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

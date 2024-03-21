@@ -8,6 +8,7 @@ import "@/app/responsive.css";
 import "@/app/styles.css";
 import Heder from "../components/about/Heder";
 import ScrollToTop from "../components/scrolling/ScrollToTop";
+import "@/app/referrers/referrers.css";
 
 const page = () => {
   return (
@@ -40,7 +41,12 @@ const page = () => {
             </ul>
             <p>
               Read &nbsp; more about our working method&nbsp;
-              <a href="https://www.misineuropsy.nl/onze-werkwijze">here .</a>
+              <a
+                className="custom-a"
+                href="https://www.misineuropsy.nl/onze-werkwijze"
+              >
+                here .
+              </a>
             </p>
             <p>
               <br />
@@ -65,8 +71,14 @@ const page = () => {
             <p>
               Would you like to register with MiSi NeuroPsy?&nbsp;Then click
               &nbsp;
-              <a href="https://www.misineuropsy.nl/aanmelden">here</a> . If you
-              have any questions or comments, you can always contact us.
+              <a
+                className="custom-a"
+                href="https://www.misineuropsy.nl/aanmelden"
+              >
+                here
+              </a>{" "}
+              . If you have any questions or comments, you can always contact
+              us.
             </p>
           </>
         </div>
