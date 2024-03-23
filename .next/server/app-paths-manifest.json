@@ -1,24 +1,10 @@
 {
-  "/_not-found": "app/_not-found.js",
   "/about/page": "app/about/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/career/page": "app/career/page.js",
-  "/diagnostic/page": "app/diagnostic/page.js",
-  "/components/about/client-council/page": "app/components/about/client-council/page.js",
-  "/admin/page": "app/admin/page.js",
-  "/apply/page": "app/apply/page.js",
-  "/decide-together/page": "app/decide-together/page.js",
-  "/login/page": "app/login/page.js",
-  "/forget/page": "app/forget/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/e-health/page": "app/e-health/page.js",
-  "/nonInsuredCare/page": "app/nonInsuredCare/page.js",
-  "/page": "app/page.js",
-  "/referrers/page": "app/referrers/page.js",
-  "/register/page": "app/register/page.js",
+  "/waitings/page": "app/waitings/page.js",
   "/service/page": "app/service/page.js",
   "/therapy/page": "app/therapy/page.js",
-  "/toolslink/page": "app/toolslink/page.js",
-  "/waitings/page": "app/waitings/page.js",
-  "/profile/page": "app/profile/page.js"
+  "/diagnostic/page": "app/diagnostic/page.js",
+  "/career/page": "app/career/page.js",
+  "/register/page": "app/register/page.js"
 }
