@@ -3,7 +3,7 @@
   #main-menu {
     background-color: #000 !important;
   }
-  #navFade{
+  #navFade {
     transform: translateX(0%);
   }
 }
@@ -63,7 +63,10 @@
   #team .font-handwriting {
     font-size: 2.5rem;
   }
-
+  .prices-row {
+    justify-content: center;
+    height: auto !important;
+  }
   .prices-row .card {
     min-height: 282px;
   }
@@ -75,7 +78,9 @@
   .prices-row .card .card-img {
     min-height: 210px;
   }
-
+  .catsContent {
+    height: 350px !important;
+  }
   .prices-row .card .card-img img {
     height: 200px;
     width: 100%;
@@ -86,11 +91,11 @@
   #award img {
     height: 48px;
   }
-  .cats{
-    width: 15rem!important;
-    height: 26rem!important;
+  .cats {
+    width: 15rem !important;
+    height: 26rem !important;
   }
-  .prices-row{
+  .prices-row {
     height: auto !important;
   }
 }
