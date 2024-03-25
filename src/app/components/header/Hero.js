@@ -1,29 +1,26 @@
 "use client";
-import MainMenu from "./MainMenu";
 import slide1 from "@../../../public/images/header/header1.jpeg";
 import slide2 from "@../../../public/images/header/header2.jpeg";
 import slide3 from "@../../../public/images/header/header3.webp";
-import { EffectCreative } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import React, { useState } from "react";
+import { Autoplay } from "swiper/modules";
+import React, { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/effect-creative";
-
-const headerData = [
-  {
-    image: slide1,
-    text: "Love your Life",
-  },
-  {
-    image: slide2,
-    text: "Turn the stress into strength",
-  },
-  {
-    image: slide3,
-    text: "Heal the heart",
-  },
-];
+// const headerData = [
+//   {
+//     image: slide1,
+//     text: "Love your Life",
+//   },
+//   {
+//     image: slide2,
+//     text: "Turn the stress into strength",
+//   },
+//   {
+//     image: slide3,
+//     text: "Heal the heart",
+//   },
+// ];
 
 const HeaderText = ({ text, index }) => {
   return (
@@ -53,6 +50,22 @@ const HeaderText = ({ text, index }) => {
 };
 
 const Hero = () => {
+  const [headerData, setHeaderData] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}api/hero-slider/`
+        );
+        const data = await res.json();
+        setHeaderData(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
   return (
     <>
       <Swiper
@@ -114,12 +127,12 @@ const Hero = () => {
               }}
             >
               <img
-                src={data.image.src}
+                src={data.heroImage}
                 style={{ width: "100%", height: "100vh", objectFit: "cover" }}
                 alt="HERO"
               />
             </div>
-            <HeaderText text={data.text} index={index} />
+            <HeaderText text={data.title} index={index} />
           </SwiperSlide>
         ))}
       </Swiper>
