@@ -1,26 +1,9 @@
 "use client";
-import slide1 from "@../../../public/images/header/header1.jpeg";
-import slide2 from "@../../../public/images/header/header2.jpeg";
-import slide3 from "@../../../public/images/header/header3.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import React, { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/effect-creative";
-// const headerData = [
-//   {
-//     image: slide1,
-//     text: "Love your Life",
-//   },
-//   {
-//     image: slide2,
-//     text: "Turn the stress into strength",
-//   },
-//   {
-//     image: slide3,
-//     text: "Heal the heart",
-//   },
-// ];
 
 const HeaderText = ({ text, index }) => {
   return (
