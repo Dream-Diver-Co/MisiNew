@@ -58,7 +58,10 @@ const Prices = () => {
                   <div className=" catsContent" style={{ height: "100%" }}>
                     <div className="rounded-5 frontSide">
                       <div style={{ height: "250px" }}>
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
+                          loading="lazy"
                           src={service.image}
                           style={{ width: "auto", height: "100%" }}
                           alt="1.png"

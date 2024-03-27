@@ -8,6 +8,11 @@ class HeroSlider (models.Model):
     heroImage = models.ImageField(upload_to='Hero')
     def __str__(self):
         return self.title
+class Award (models.Model):
+    title = models.CharField(max_length=200)
+    heroImage = models.ImageField(upload_to='Award')
+    def __str__(self):
+        return self.title
     
 class SpecialEvent(models.Model):
     title = models.CharField(max_length=500)

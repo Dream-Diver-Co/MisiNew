@@ -1,9 +1,13 @@
 from rest_framework import serializers
-from .models import HeroSlider,SpecialEvent,Service
+from .models import HeroSlider,SpecialEvent,Service,Award
 
 class HeroSlideSerializer(serializers.ModelSerializer):
     class Meta:
         model = HeroSlider 
+        fields = '__all__'  
+class AwardSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Award 
         fields = '__all__'  
         
 class SpecialEventSerializer(serializers.ModelSerializer):

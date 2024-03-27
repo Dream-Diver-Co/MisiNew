@@ -13,6 +13,7 @@ import Head from "next/head";
 import Heder from "../components/about/Heder";
 import ScrollToTop from "../components/scrolling/ScrollToTop";
 import "@/app/referrers/referrers.css";
+import ZorgkaartNL from "@../../../public/images/ZorgkaartNL.png";
 const about = () => {
   return (
     <div>
@@ -706,7 +707,6 @@ const about = () => {
                     <div className="mceNonEditable">
                       <form className="style-4">
                         <div>
-                          {/**/}{" "}
                           <div className="row form-row">
                             <div className="col-100">
                               <div id="HgnAOy">
@@ -725,7 +725,6 @@ const about = () => {
                                     </label>
                                   </div>{" "}
                                   <div className="el-input">
-                                    {/**/}
                                     <input
                                       type="text"
                                       autoComplete="off"
@@ -733,13 +732,8 @@ const about = () => {
                                       className="el-input__inner"
                                       style={{ width: "100%" }}
                                     />
-                                    {/**/}
-                                    {/**/}
-                                    {/**/}
-                                  </div>{" "}
-                                  {/**/}
-                                </div>{" "}
-                                {/**/} {/**/}
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -761,7 +755,6 @@ const about = () => {
                                     </label>
                                   </div>{" "}
                                   <div className="el-input">
-                                    {/**/}
                                     <input
                                       type="text"
                                       autoComplete="off"
@@ -769,13 +762,8 @@ const about = () => {
                                       className="el-input__inner"
                                       style={{ width: "100%" }}
                                     />
-                                    {/**/}
-                                    {/**/}
-                                    {/**/}
-                                  </div>{" "}
-                                  {/**/}
-                                </div>{" "}
-                                {/**/} {/**/}
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -804,10 +792,8 @@ const about = () => {
                                       style={{ minHeight: 23, width: "100%" }}
                                       defaultValue={""}
                                     />
-                                  </div>{" "}
-                                  {/**/}
-                                </div>{" "}
-                                {/**/} {/**/}
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -846,8 +832,7 @@ const about = () => {
                                     />
                                   </div>
                                   <iframe style={{ display: "none" }} />
-                                </div>{" "}
-                                {/**/}
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -864,14 +849,14 @@ const about = () => {
                           </div>
                         </div>
                       </form>
-                    </div>{" "}
+                    </div>
                     <h3>
                       <font style={{ verticalAlign: "inherit" }}>
                         <font style={{ verticalAlign: "inherit" }}>
                           Let us know your opinion
                         </font>
                       </font>
-                    </h3>{" "}
+                    </h3>
                     <p>
                       <font style={{ verticalAlign: "inherit" }}>
                         <font style={{ verticalAlign: "inherit" }}>
@@ -882,7 +867,7 @@ const about = () => {
                           MiSi NeuroSpy.
                         </font>
                       </font>
-                    </p>{" "}
+                    </p>
                     <p>
                       <a
                         target="_blank"
@@ -1305,12 +1290,7 @@ const about = () => {
                   evaluations, click here.
                 </p>
                 <h3>
-                  <img
-                    src="https://www.misineuropsy.nl/uploads/15/Zorgkaart%20NL.png"
-                    alt=""
-                    width={184}
-                    height={58}
-                  />
+                  <Image src={ZorgkaartNL} alt="" width={184} height={58} />
                   <br />
                   &nbsp;
                   <br />
