@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Countdown from "react-countdown";
 import "../../page.module.css";
@@ -10,35 +10,25 @@ import "../../IdealBankSectionStyles.css";
 import "../../responsive.css";
 import "../../styles.css";
 import Image from "next/image";
-import event1 from "@/../../public/images/event/event1.png";
-import event2 from "@/../../public/images/event/event2.png";
 const SpecialEventd = () => {
-  const [events, setEvents] = useState([
-    {
-      id: 1,
-      title: "Neuro Seminar",
-      description: "",
-      image: event1,
-      startDate: new Date("May 15, 2023").toDateString(),
-      endDate: new Date("May 18, 2023").toDateString(),
-    },
-    {
-      id: 2,
-      title: "Neuro Seminar 2",
-      description: "",
-      image: event2,
-      startDate: new Date("May 20, 2023").toDateString(),
-      endDate: new Date("May 25, 2022").toDateString(),
-    },
-    {
-      id: 3,
-      title: "Health workshop",
-      description: "",
-      image: event2,
-      startDate: new Date("May 20, 2023").toDateString(),
-      endDate: new Date("May 25, 2023").toDateString(),
-    },
-  ]);
+  const [events, setEvents] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}api/special-event/`
+        );
+        const data = await res.json();
+        setEvents(data);
+        console.log(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <div className="w-100" id="special">
       <div
