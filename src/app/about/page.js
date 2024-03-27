@@ -13,6 +13,7 @@ import Head from "next/head";
 import Heder from "../components/about/Heder";
 import ScrollToTop from "../components/scrolling/ScrollToTop";
 import "@/app/referrers/referrers.css";
+import ZorgkaartNL from "@../../../public/images/ZorgkaartNL.png";
 const about = () => {
   return (
     <div>
@@ -1305,12 +1306,7 @@ const about = () => {
                   evaluations, click here.
                 </p>
                 <h3>
-                  <img
-                    src="https://www.misineuropsy.nl/uploads/15/Zorgkaart%20NL.png"
-                    alt=""
-                    width={184}
-                    height={58}
-                  />
+                  <Image src={ZorgkaartNL} alt="" width={184} height={58} />
                   <br />
                   &nbsp;
                   <br />
