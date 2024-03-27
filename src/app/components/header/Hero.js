@@ -4,6 +4,7 @@ import { Autoplay } from "swiper/modules";
 import React, { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/effect-creative";
+import Image from "next/image";
 
 const HeaderText = ({ text, index }) => {
   return (
@@ -109,7 +110,9 @@ const Hero = () => {
                 overflow: "hidden",
               }}
             >
-              <img
+              <Image
+                width={500}
+                height={500}
                 src={data.heroImage}
                 style={{ width: "100%", height: "100vh", objectFit: "cover" }}
                 alt="HERO"

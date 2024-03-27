@@ -8,61 +8,28 @@ import "@/app/IdealBankSectionStyles.css";
 import "@/app/responsive.css";
 import "@/app/page.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import th from "@../../../public/images/services/tp.jpg";
-import dr from "@../../../public/images/services/dr.jpg";
-import eh from "@../../../public/images/services/eh.jpg";
-import dt from "@../../../public/images/services/dt.jpg";
-import nic from "@../../../public/images/services/nic.jpg";
-import test1 from "@../../../public/images/refer/test1.jpg";
 import Link from "next/link";
 const Prices = () => {
   const [match, setMatch] = useState(false);
 
-  const [services, setServices] = useState([
-    {
-      id: 1,
-      href: "/therapy",
-      name: "Therapy",
-      description: "We treat for various psychological care",
-      image: th.src,
-    },
-    {
-      id: 2,
-      href: "/diagnostic-research",
-      name: "Diagnostic Research",
-      description: "The diagnostics in the context of the treatment that we...",
-      image: dr.src,
-    },
-    {
-      id: 3,
-      href: "/e-health",
-      name: "E-Health",
-      description: "MiSi NeuroPsy uses eHealth support",
-      image: eh.src,
-    },
-    {
-      id: 4,
-      href: "/decide-together",
-      name: "Decide Together",
-      description: "Only the best healthcare offer is good enough for you",
-      image: dt.src,
-    },
-    {
-      id: 5,
-      href: "/non-insured-care",
-      name: "Non-insured care",
-      description:
-        "In addition to insured care, we also offer non-insured care",
-      image: nic.src,
-    },
-    {
-      id: 6,
-      href: "/referrers",
-      name: "Referrer",
-      description: "We offer insured care for various diagnosis groups",
-      image: test1.src,
-    },
-  ]);
+  const [services, setServices] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}api/service/`
+        );
+        const data = await res.json();
+        setServices(data);
+        console.log(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
   useEffect(() => {
     const mediaMatch = window.matchMedia("(min-width: 500px)");
     if (mediaMatch.matches) {

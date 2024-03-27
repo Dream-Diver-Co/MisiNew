@@ -1,11 +1,5 @@
 module.exports = {
-    images: {
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'www.misineuropsy.nl',
-          port: '',
-        },
-      ],
-    },
-  }
+  images: {
+    domains: ["localhost", "127.0.0.1"], // Allow images from localhost and 127.0.0.1
+  },
+};
