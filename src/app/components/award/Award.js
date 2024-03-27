@@ -9,12 +9,6 @@ import "swiper/css/pagination"; // Import Swiper pagination styles
 import "swiper/css/navigation"; // Import Swiper navigation styles
 import "../../responsive.css";
 import "../../styles.css";
-import logo1 from "@../../../public/images/images/connections/logo1.png";
-import logo2 from "@../../../public/images/images/connections/logo2.png";
-import logo3 from "@../../../public/images/images/connections/logo3.png";
-import logo4 from "@../../../public/images/images/connections/logo4.png";
-import logo5 from "@../../../public/images/images/connections/logo5.png";
-import logo7 from "@../../../public/images/images/connections/logo7.png";
 import Image from "next/image";
 
 const Award = () => {
@@ -51,26 +45,6 @@ const Award = () => {
 
     fetchData();
   }, []);
-  // const brandImages = [
-  //   {
-  //     image: logo1,
-  //   },
-  //   {
-  //     image: logo2,
-  //   },
-  //   {
-  //     image: logo3,
-  //   },
-  //   {
-  //     image: logo4,
-  //   },
-  //   {
-  //     image: logo5,
-  //   },
-  //   {
-  //     image: logo7,
-  //   },
-  // ]
   return (
     <section id="award" className="bg-white w-100 py-4">
       <div className="container">
